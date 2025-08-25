@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.30/bin/ftn -O2 -traceback -gcc-name=/usr/bin/gcc-12 CMakeFiles/hafs_nhc_products.x.dir/create_stats_short.f90.o -o hafs_nhc_products.x 

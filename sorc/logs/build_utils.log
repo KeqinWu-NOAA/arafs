@@ -1,0 +1,817 @@
++ source ./machine-setup.sh.inc
++ '[' gaeac6 = wcoss2 ']'
++ BUILD_MODE=Release
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ cd hafs_utils.fd
++ export BUILD_TYPE=Release
++ BUILD_TYPE=Release
++ ./build_all.sh
+++ uname -s
++ [[ Linux == Darwin ]]
+++++ readlink -f -n ./build_all.sh
++++ dirname /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build_all.sh
+++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd
+++ pwd -P
++ readonly DIR_ROOT=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd
++ DIR_ROOT=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd
++ target=NULL
++ compiler=intel
++ PW_CSP=
++ [[ NULL == \l\i\n\u\x\.\* ]]
++ [[ NULL == \m\a\c\o\s\x\.\* ]]
++ set +x
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Currently Loaded Modules:
+  1) cray-dsmml/0.2.2         10) craype/2.7.30   19) nemsio/2.5.4   28) c-blosc/1.21.5          37) antlr/2.7.7
+  2) cray-libsci/24.07.0      11) nghttp2/1.57.0  20) sp/2.5.0       29) pkg-config/0.29.2       38) gsl/2.7.1
+  3) PrgEnv-intel/8.5.0       12) curl/8.4.0      21) w3emc/2.10.0   30) hdf5/1.14.0             39) udunits/2.2.28
+  4) intel-classic/2023.2.0   13) cmake/3.23.1    22) sigio/2.3.2    31) netcdf-c/4.9.2          40) nco/5.0.6
+  5) stack-intel/2023.2.0     14) bacio/2.4.1     23) sfcio/1.4.1    32) netcdf-fortran/4.6.1    41) build.gaeac6.intel
+  6) libfabric/1.20.1         15) libjpeg/2.1.0   24) zlib/1.2.13    33) nccmp/1.9.0.1
+  7) craype-network-ofi       16) jasper/2.0.32   25) libpng/1.6.37  34) parallel-netcdf/1.12.2
+  8) cray-mpich/8.1.29        17) g2/3.4.5        26) snappy/1.1.10  35) parallelio/2.5.10
+  9) stack-cray-mpich/8.1.29  18) ip/4.3.0        27) zstd/1.5.2     36) esmf/8.5.0
+
+ 
+
++ [[ ! -d /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/ccpp-physics/physics ]]
++ CMAKE_FLAGS+=' -DCMAKE_BUILD_TYPE=Release'
++ CMAKE_FLAGS+=' -DCMAKE_INSTALL_PREFIX=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd -DCMAKE_INSTALL_BINDIR=exec'
++ CMAKE_FLAGS+=' -DBUILD_TESTING=OFF'
++ CMAKE_OPTS=
++ BUILD_DIR=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build
++ [[ YES =~ [yYtT] ]]
++ rm -rf /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build
++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd -DCMAKE_INSTALL_BINDIR=exec -DBUILD_TESTING=OFF /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd
+-- The C compiler identification is Intel 2021.10.0.20230609
+-- The Fortran compiler identification is Intel 2021.10.0.20230609
+-- Cray Programming Environment 2.7.30 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.30 Fortran
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn - skipped
+-- Found MPI_C: /opt/cray/pe/craype/2.7.30/bin/cc (found version "3.1") 
+-- Found MPI_Fortran: /opt/cray/pe/craype/2.7.30/bin/ftn (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/include;/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/include (found suitable version "4.9.2", minimum required is "4.3.3") found components: C Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/lib/libnetcdff.so 
+-- Found MPI: TRUE (found version "3.1") found components: C Fortran 
+-- Found ESMF library: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/esmf-8.5.0-w3pc7al/lib/libesmf.a
+-- Found ESMF: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/esmf-8.5.0-w3pc7al/lib (found suitable version "8.5.0", minimum required is "8.0.0")  
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found sfcio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sfcio-1.4.1-dkbhxkw/lib/libsfcio.a (found version "1.4.0")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/w3emc-2.10.0-e3vtojl/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/w3emc-2.10.0-e3vtojl/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found nemsio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/nemsio-2.5.4-kinowzp/lib64/libnemsio.a (found version "2.5.4")
+-- Found sigio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sigio-2.3.2-mrfjabr/lib/libsigio.a (found version "2.3.0")
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sp-2.5.0-z2pppuo/lib64/libsp_4.a (found version "2.5.0")
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sp-2.5.0-z2pppuo/lib64/libsp_4.a (found version "2.5.0")
+-- Found ip: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/ip-4.3.0-cxdf6jz/lib64/libip_4.a (found version "4.2.0")
+-- Found ZLIB: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/zlib-1.2.13-ynua4de/lib/libz.so (found version "1.2.13") 
+-- Found PNG: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/libpng-1.6.37-3o5v2aq/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/g2-3.4.5-stc3sl5/lib64/libg2_4.a (found version "3.4.5")
+-- Found sigio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sigio-2.3.2-mrfjabr/lib/libsigio.a (found version "2.3.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build
++ make -j 8 VERBOSE=
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/depend.internal".
+Scanning dependencies of target emcsfc_ice_blend
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/depend.internal".
+Scanning dependencies of target snow2mdl_lib
+Scanning dependencies of target noah_lsm_routines
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/shave.fd/CMakeFiles/shave.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/shave.fd/CMakeFiles/shave.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/shave.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/shave.fd/CMakeFiles/shave.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo_lib.dir/depend.internal".
+Scanning dependencies of target shave
+Scanning dependencies of target filter_topo_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/global_equiv_resol.fd/CMakeFiles/global_equiv_resol.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/global_equiv_resol.fd/CMakeFiles/global_equiv_resol.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/global_equiv_resol.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/global_equiv_resol.fd/CMakeFiles/global_equiv_resol.dir/depend.internal".
+Scanning dependencies of target global_equiv_resol
+[  1%] Building Fortran object sorc/emcsfc_ice_blend.fd/CMakeFiles/emcsfc_ice_blend.dir/emcsfc_ice_blend.f90.o
+Scanning dependencies of target regional_esg_grid
+[  2%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/program_setup.F90.o
+[  2%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/bulk_snow_module.f90.o
+[  2%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/create_xgrid.c.o
+[  2%] Building Fortran object sorc/grid_tools.fd/shave.fd/CMakeFiles/shave.dir/shave_nc.F90.o
+[  3%] Building Fortran object sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo_lib.dir/utils.F90.o
+[  4%] Building Fortran object sorc/grid_tools.fd/global_equiv_resol.fd/CMakeFiles/global_equiv_resol.dir/global_equiv_resol.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[  5%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pkind.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[  6%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/grib_utils.F90.o
+[  6%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/set_soilveg_snippet.f90.o
+[  6%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pietc.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[  7%] Linking Fortran executable shave
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[  8%] Building Fortran object sorc/lsm_routines.fd/noah.fd/CMakeFiles/noah_lsm_routines.dir/sflx_snippet.f90.o
+[  8%] Linking Fortran executable global_equiv_resol
+[  9%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pietc_s.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[  9%] Linking Fortran static library libfilter_topo_lib.a
+[  9%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/model_grid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 10%] Linking Fortran executable emcsfc_ice_blend
+[ 10%] Built target filter_topo_lib
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 11%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pfun.f90.o
+[ 12%] Linking Fortran static library libnoah_lsm_routines.a
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/depend.internal".
+Scanning dependencies of target msis2
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 12%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_constants.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 12%] Built target noah_lsm_routines
+[ 12%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pmat.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog_lib.dir/depend.internal".
+[ 13%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_init.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Scanning dependencies of target orog_lib
+[ 13%] Built target shave
+[ 14%] Building Fortran object sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog_lib.dir/netcdf_io.F90.o
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl_lib.dir/depend.internal".
+Scanning dependencies of target orog_gsl_lib
+[ 14%] Built target global_equiv_resol
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 15%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/psym2.f90.o
+[ 15%] Building Fortran object sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl_lib.dir/module_gsl_oro_data_lg_scale.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 16%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/gradient_c2l.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 16%] Built target emcsfc_ice_blend
+[ 17%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_utils.F90.o
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 18%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/snowdat.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 19%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/interp.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 19%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_gfn.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 19%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/mosaic_util.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 20%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/mpp.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 21%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_tfn.F90.o
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 21%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/mpp_domain.c.o
+[ 21%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/snow2mdl_lib.dir/snow2mdl.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 22%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_dfn.F90.o
+[ 23%] Linking Fortran static library liborog_lib.a
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 24%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/mpp_io.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 24%] Built target orog_lib
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 25%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/read_mosaic.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac_lib.dir/depend.internal".
+Scanning dependencies of target lakefrac_lib
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 26%] Building Fortran object sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac_lib.dir/enclosure_cnvx.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 26%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_calc.F90.o
+[ 26%] Building Fortran object sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac_lib.dir/find_limit.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 26%] Building C object sorc/fre-nctools.fd/shared_lib/CMakeFiles/shared_lib.dir/tool_util.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 26%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pmat4.f90.o
+[ 27%] Building Fortran object sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl_lib.dir/module_gsl_oro_data_sm_scale.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 28%] Linking Fortran static library liblakefrac_lib.a
+[ 29%] Building Fortran object sorc/chgres_cube.fd/msis2.1.fd/CMakeFiles/msis2.dir/msis_gtd8d.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 29%] Built target lakefrac_lib
+[ 30%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pmat2.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland_lib.dir/depend.internal".
+Scanning dependencies of target inland_lib
+[ 31%] Linking Fortran static library libmsis2.a
+[ 31%] Building Fortran object sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland_lib.dir/nb.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/depend.internal".
+[ 32%] Linking Fortran static library libsnow2mdl_lib.a
+Scanning dependencies of target sfc_climo_gen_lib
+[ 32%] Built target msis2
+[ 33%] Linking C static library libshared_lib.a
+[ 34%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/utils.f90.o
+[ 34%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/program_setup.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 34%] Built target snow2mdl_lib
+[ 34%] Built target shared_lib
+[ 34%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/search.f90.o
+[ 35%] Linking Fortran static library libinland_lib.a
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 36%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/search_frac_cats.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/depend.internal".
+Scanning dependencies of target vcoord_gen_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/depend.internal".
+Scanning dependencies of target fvcom_tools_lib
+[ 36%] Building Fortran object sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/driver.f90.o
+[ 36%] Built target inland_lib
+[ 37%] Building Fortran object sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/kinds.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 37%] Building Fortran object sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/module_ncio.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 38%] Building Fortran object sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/matrix_utils.f90.o
+[ 39%] Building Fortran object sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen_lib.dir/vcoord_gen.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 40%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/source_grid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 40%] Linking Fortran static library libvcoord_gen_lib.a
+[ 41%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/model_grid.F90.o
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/gblevents.fd/CMakeFiles/gblevents.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/gblevents.fd/CMakeFiles/gblevents.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/gblevents.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/gblevents.fd/CMakeFiles/gblevents.dir/depend.internal".
+Scanning dependencies of target gblevents
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 42%] Building Fortran object sorc/gblevents.fd/CMakeFiles/gblevents.dir/gblevents.f.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 42%] Built target vcoord_gen_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/depend.internal".
+Scanning dependencies of target cpld_gridgen_lib
+[ 42%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/gengrid_kinds.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 43%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/grdvars.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/weight_gen.fd/CMakeFiles/weight_gen.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/weight_gen.fd/CMakeFiles/weight_gen.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/weight_gen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/weight_gen.fd/CMakeFiles/weight_gen.dir/depend.internal".
+Scanning dependencies of target weight_gen
+[ 43%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/charstrings.F90.o
+[ 44%] Building Fortran object sorc/weight_gen.fd/CMakeFiles/weight_gen.dir/scrip.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/ocean_merge.fd/CMakeFiles/ocean_merge.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/ocean_merge.fd/CMakeFiles/ocean_merge.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/ocean_merge.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/ocean_merge.fd/CMakeFiles/ocean_merge.dir/depend.internal".
+Scanning dependencies of target ocean_merge
+[ 45%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/angles.F90.o
+[ 46%] Building Fortran object sorc/ocean_merge.fd/CMakeFiles/ocean_merge.dir/merge_lake_ocnmsk.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 47%] Building Fortran object sorc/fvcom_tools.fd/CMakeFiles/fvcom_tools_lib.dir/module_nwp.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 47%] Linking Fortran static library liborog_gsl_lib.a
+[ 48%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/debugprint.F90.o
+[ 48%] Built target orog_gsl_lib
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 48%] Linking Fortran executable ocean_merge
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/depend.internal".
+Scanning dependencies of target emcsfc_snow2mdl
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 48%] Building Fortran object sorc/emcsfc_snow2mdl.fd/CMakeFiles/emcsfc_snow2mdl.dir/driver.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 48%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/output_frac_cats.F90.o
+[ 49%] Linking Fortran executable emcsfc_snow2mdl
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 50%] Linking Fortran executable weight_gen
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 50%] Built target ocean_merge
+[ 50%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/inputnml.F90.o
+[ 51%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/mapped_mask.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/depend.internal".
+Scanning dependencies of target global_cycle_lib
+[ 51%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/machine.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 51%] Built target emcsfc_snow2mdl
+[ 51%] Built target weight_gen
+[ 52%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/utils.F90.o
+[ 53%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/postwgts.F90.o
+[ 54%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/interp.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 54%] Linking Fortran static library libfvcom_tools_lib.a
+[ 55%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/num_parthds.f90.o
+[ 56%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/output.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 56%] Built target fvcom_tools_lib
+[ 57%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/topoedits.F90.o
+[ 58%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/vertices.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 59%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/__/__/ccpp-physics/physics/sfcsub.F.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 60%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pmat5.f90.o
+[ 60%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/read_write_data.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 60%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/vartypedefs.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 61%] Building C object sorc/fre-nctools.fd/tools/fregrid/CMakeFiles/fregrid_lib.dir/bilinear_interp.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 62%] Building C object sorc/fre-nctools.fd/tools/make_solo_mosaic/CMakeFiles/make_solo_mosaic_lib.dir/make_solo_mosaic.c.o
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 63%] Linking Fortran static library libgblevents.a
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 63%] Built target gblevents
+[ 64%] Building C object sorc/fre-nctools.fd/tools/fregrid/CMakeFiles/fregrid_lib.dir/conserve_interp.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 64%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/scripgrid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 64%] Building C object sorc/fre-nctools.fd/tools/make_solo_mosaic/CMakeFiles/make_solo_mosaic_lib.dir/get_contact.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 64%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/pesg.f90.o
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 64%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen_lib.dir/interp_frac_cats.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 65%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/tripolegrid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 65%] Building C object sorc/fre-nctools.fd/tools/fregrid/CMakeFiles/fregrid_lib.dir/fregrid_util.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 66%] Linking C static library libmake_solo_mosaic_lib.a
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 66%] Built target make_solo_mosaic_lib
+[ 67%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen_lib.dir/cicegrid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 68%] Building C object sorc/fre-nctools.fd/tools/make_hgrid/CMakeFiles/make_hgrid_lib.dir/create_conformal_cubic_grid.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 68%] Linking Fortran static library libcpld_gridgen_lib.a
+[ 68%] Built target cpld_gridgen_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo.dir/depend.internal".
+Scanning dependencies of target filter_topo
+[ 69%] Linking Fortran static library libsfc_climo_gen_lib.a
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/depend.internal".
+[ 69%] Building Fortran object sorc/grid_tools.fd/filter_topo.fd/CMakeFiles/filter_topo.dir/filter_topo.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Scanning dependencies of target chgres_cube_lib
+[ 69%] Built target sfc_climo_gen_lib
+[ 69%] Building C object sorc/fre-nctools.fd/tools/make_hgrid/CMakeFiles/make_hgrid_lib.dir/create_gnomonic_cubic_grid.c.o
+[ 70%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/utils.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 70%] Building Fortran object sorc/grid_tools.fd/regional_esg_grid.fd/CMakeFiles/regional_esg_grid.dir/regional_esg_grid.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 71%] Building C object sorc/fre-nctools.fd/tools/make_hgrid/CMakeFiles/make_hgrid_lib.dir/create_grid_from_file.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 72%] Linking Fortran executable regional_esg_grid
+[ 72%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/surface_target_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 72%] Building C object sorc/fre-nctools.fd/tools/make_hgrid/CMakeFiles/make_hgrid_lib.dir/create_lonlat_grid.c.o
+[ 73%] Linking C static library libfregrid_lib.a
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 73%] Built target fregrid_lib
+[ 73%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/search_util.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog.dir/depend.internal".
+Scanning dependencies of target orog
+[ 74%] Building Fortran object sorc/orog_mask_tools.fd/orog.fd/CMakeFiles/orog.dir/mtnlm7_oclsm.F.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 74%] Built target regional_esg_grid
+[ 74%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/wam_climo_data.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl.dir/depend.internal".
+Scanning dependencies of target orog_gsl
+[ 75%] Building Fortran object sorc/orog_mask_tools.fd/orog_gsl.fd/CMakeFiles/orog_gsl.dir/gsl_oro_data.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac.dir/depend.internal".
+Scanning dependencies of target lakefrac
+[ 75%] Building Fortran object sorc/orog_mask_tools.fd/lake.fd/CMakeFiles/lakefrac.dir/lakefrac.F90.o
+[ 76%] Linking Fortran executable orog_gsl
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland.dir/depend.internal".
+Scanning dependencies of target inland
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 77%] Building Fortran object sorc/orog_mask_tools.fd/inland.fd/CMakeFiles/inland.dir/inland.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 78%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/program_setup.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 79%] Linking C static library libmake_hgrid_lib.a
+[ 79%] Built target make_hgrid_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen.dir/depend.internal".
+Scanning dependencies of target sfc_climo_gen
+[ 79%] Building Fortran object sorc/sfc_climo_gen.fd/CMakeFiles/sfc_climo_gen.dir/driver.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 80%] Linking Fortran executable inland
+[ 80%] Built target orog_gsl
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen.dir/depend.internal".
+Scanning dependencies of target vcoord_gen
+[ 80%] Building Fortran object sorc/vcoord_gen.fd/CMakeFiles/vcoord_gen.dir/driver.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 81%] Linking Fortran executable lakefrac
+[ 82%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/model_grid.F90.o
+[ 83%] Linking Fortran executable vcoord_gen
+[ 84%] Linking Fortran executable sfc_climo_gen
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 84%] Built target inland
+[ 85%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/atmosphere_target_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 85%] Built target vcoord_gen
+[ 86%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/thompson_mp_climo_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 86%] Built target lakefrac
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_to_FV3.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_to_FV3.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/fvcom_tools.fd/CMakeFiles/fvcom_to_FV3.dir/depend.internal".
+Scanning dependencies of target fvcom_to_FV3
+[ 86%] Building Fortran object sorc/fvcom_tools.fd/CMakeFiles/fvcom_to_FV3.dir/process_FVCOM.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen.dir/depend.internal".
+Scanning dependencies of target cpld_gridgen
+[ 87%] Building Fortran object sorc/cpld_gridgen.fd/CMakeFiles/cpld_gridgen.dir/gen_fixgrid.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 88%] Linking Fortran executable fvcom_to_FV3
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 89%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle_lib.dir/land_increments.f90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 89%] Built target sfc_climo_gen
+[ 90%] Building C object sorc/fre-nctools.fd/tools/fregrid/CMakeFiles/fregrid.dir/fregrid.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 90%] Built target fvcom_to_FV3
+[ 91%] Building C object sorc/fre-nctools.fd/tools/make_solo_mosaic/CMakeFiles/make_solo_mosaic.dir/make_solo_mosaic.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 92%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/grib2_util.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 93%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/static_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 93%] Linking C executable fregrid
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 93%] Linking C executable make_solo_mosaic
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 93%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/atm_input_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 93%] Built target fregrid
+[ 93%] Built target make_solo_mosaic
+[ 93%] Building C object sorc/fre-nctools.fd/tools/make_hgrid/CMakeFiles/make_hgrid.dir/make_hgrid.c.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 93%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/write_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 94%] Linking C executable make_hgrid
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+[ 95%] Linking Fortran executable filter_topo
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 95%] Built target make_hgrid
+[ 95%] Built target filter_topo
+[ 95%] Linking Fortran executable orog
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 95%] Linking Fortran static library libglobal_cycle_lib.a
+[ 95%] Built target global_cycle_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/global_cycle.fd/CMakeFiles/global_cycle.dir/depend.internal".
+Scanning dependencies of target global_cycle
+[ 95%] Building Fortran object sorc/global_cycle.fd/CMakeFiles/global_cycle.dir/cycle.f90.o
+[ 95%] Linking Fortran executable cpld_gridgen
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 95%] Built target orog
+[ 95%] Built target cpld_gridgen
+[ 96%] Linking Fortran executable global_cycle
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 96%] Built target global_cycle
+[ 97%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/sfc_input_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 97%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/atmosphere.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 97%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/nst_input_data.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 98%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube_lib.dir/surface.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[ 99%] Linking Fortran static library libchgres_cube_lib.a
+[ 99%] Built target chgres_cube_lib
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube.dir/DependInfo.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube.dir/depend.internal".
+Dependee "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/build/sorc/chgres_cube.fd/CMakeFiles/chgres_cube.dir/depend.internal".
+Scanning dependencies of target chgres_cube
+[ 99%] Building Fortran object sorc/chgres_cube.fd/CMakeFiles/chgres_cube.dir/chgres.F90.o
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[100%] Linking Fortran executable chgres_cube
+No supported cpu target is set, CRAY_CPU_TARGET=x86-64 will be used.
+Load a valid targeting module or set CRAY_CPU_TARGET
+[100%] Built target chgres_cube
++ make install
+[  2%] Built target emcsfc_ice_blend
+[  6%] Built target snow2mdl_lib
+[  7%] Built target emcsfc_snow2mdl
+[  9%] Built target noah_lsm_routines
+[ 13%] Built target global_cycle_lib
+[ 14%] Built target global_cycle
+Consolidate compiler generated dependencies of target shared_lib
+[ 20%] Built target shared_lib
+Consolidate compiler generated dependencies of target fregrid_lib
+[ 23%] Built target fregrid_lib
+Consolidate compiler generated dependencies of target fregrid
+[ 24%] Built target fregrid
+Consolidate compiler generated dependencies of target make_solo_mosaic_lib
+[ 26%] Built target make_solo_mosaic_lib
+Consolidate compiler generated dependencies of target make_solo_mosaic
+[ 27%] Built target make_solo_mosaic
+Consolidate compiler generated dependencies of target make_hgrid_lib
+[ 30%] Built target make_hgrid_lib
+Consolidate compiler generated dependencies of target make_hgrid
+[ 31%] Built target make_hgrid
+[ 32%] Built target shave
+[ 33%] Built target filter_topo_lib
+[ 34%] Built target filter_topo
+[ 41%] Built target regional_esg_grid
+[ 42%] Built target global_equiv_resol
+[ 48%] Built target msis2
+[ 58%] Built target chgres_cube_lib
+[ 59%] Built target chgres_cube
+[ 61%] Built target orog_lib
+[ 62%] Built target orog
+[ 63%] Built target orog_gsl_lib
+[ 65%] Built target orog_gsl
+[ 67%] Built target lakefrac_lib
+[ 68%] Built target lakefrac
+[ 69%] Built target inland_lib
+[ 71%] Built target inland
+[ 78%] Built target sfc_climo_gen_lib
+[ 79%] Built target sfc_climo_gen
+[ 81%] Built target vcoord_gen_lib
+[ 82%] Built target vcoord_gen
+[ 84%] Built target fvcom_tools_lib
+[ 85%] Built target fvcom_to_FV3
+[ 87%] Built target gblevents
+[ 96%] Built target cpld_gridgen_lib
+[ 97%] Built target cpld_gridgen
+[ 99%] Built target weight_gen
+[100%] Built target ocean_merge
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/emcsfc_ice_blend
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/emcsfc_ice_blend" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/emcsfc_snow2mdl
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/emcsfc_snow2mdl" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/global_cycle
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/global_cycle" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/fregrid
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/fregrid" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/make_solo_mosaic
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/make_solo_mosaic" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/make_hgrid
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/make_hgrid" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/shave
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/shave" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/filter_topo
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/filter_topo" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/regional_esg_grid
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/regional_esg_grid" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/global_equiv_resol
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/global_equiv_resol" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/chgres_cube
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/chgres_cube" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/orog
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/orog" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/orog_gsl
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/orog_gsl" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/lakefrac
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/lakefrac" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/inland
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/inland" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/sfc_climo_gen
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/sfc_climo_gen" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/vcoord_gen
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/fvcom_to_FV3
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/fvcom_to_FV3" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/lib/libgblevents.a
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/lib/cmake/gblevents/gblevents-config.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/lib/cmake/gblevents/gblevents-targets.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/lib/cmake/gblevents/gblevents-targets-release.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/cpld_gridgen
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/cpld_gridgen" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/weight_gen
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/weight_gen" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/ocean_merge
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_utils.fd/exec/ocean_merge" to ""
++ exit 0

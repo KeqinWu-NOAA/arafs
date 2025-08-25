@@ -1,0 +1,308 @@
++ source ./machine-setup.sh.inc
++ '[' gaeac6 = wcoss2 ']'
++ BUILD_MODE=Release
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ cd hafs_post.fd/tests
++ '[' Release = Release ']'
++ ./compile_upp.sh
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+0x0000146f7e4eabe6 in wait4 () from /lib64/libc.so.6
+$1 = 0
+$2 = -1
+[Inferior 1 (process 3464325) detached]
+Building for machine gaeac6, compiler intel
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+
+Currently Loaded Modules:
+  1) craype-x86-genoa                               13) stack-intel/2023.2.0     25) pkg-config/0.29.2       37) crtm/2.4.0.1
+  2) perftools-base/23.12.0                         14) libfabric/1.20.1         26) hdf5/1.14.0             38) g2/3.4.5
+  3) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d  15) craype-network-ofi       27) snappy/1.1.10           39) g2tmpl/1.10.2
+  4) cray-pmi/6.1.13                                16) cray-mpich/8.1.29        28) zstd/1.5.2              40) ip/4.3.0
+  5) CmrsEnv/default                                17) stack-cray-mpich/8.1.29  29) c-blosc/1.21.5          41) sp/2.5.0
+  6) TimeZoneEDT/default                            18) nghttp2/1.57.0           30) netcdf-c/4.9.2          42) w3emc/2.10.0
+  7) DefApps/default                                19) curl/8.4.0               31) netcdf-fortran/4.6.1    43) nemsio/2.5.4
+  8) cray-dsmml/0.2.2                               20) cmake/3.23.1             32) parallel-netcdf/1.12.2  44) sigio/2.3.2
+  9) cray-libsci/24.07.0                            21) libjpeg/2.1.0            33) parallelio/2.5.10       45) wrf-io/1.2.0
+ 10) PrgEnv-intel/8.5.0                             22) jasper/2.0.32            34) bacio/2.4.1             46) upp_common
+ 11) intel-classic/2023.2.0                         23) zlib/1.2.13              35) crtm-fix/2.4.0.1_emc    47) gaeac6
+ 12) craype/2.7.30                                  24) libpng/1.6.37            36) git-lfs/2.11.0
+
+ 
+
++ BUILD_DIR=build
++ rm -rf build install
++ mkdir -p build
++ cd build
++ cmake -DCMAKE_INSTALL_PREFIX=../install -DBUILD_WITH_NEMSIO=ON -DBUILD_WITH_WRFIO=ON -DBUILD_WITH_GTG=OFF -DBUILD_WITH_IFI=OFF /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/FV3/upp
+-- The Fortran compiler identification is Intel 2021.10.0.20230609
+-- The C compiler identification is Intel 2021.10.0.20230609
+-- The CXX compiler identification is Intel 2021.10.0.20230609
+-- Cray Programming Environment 2.7.30 Fortran
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn - skipped
+-- Cray Programming Environment 2.7.30 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.30 CXX
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/cray/pe/craype/2.7.30/bin/CC - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Setting build type to 'Release' as none was specified.
+-- Found MPI_C: /opt/cray/pe/craype/2.7.30/bin/cc (found version "3.1") 
+-- Found MPI_CXX: /opt/cray/pe/craype/2.7.30/bin/CC (found version "3.1") 
+-- Found MPI_Fortran: /opt/cray/pe/craype/2.7.30/bin/ftn (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/include;/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/lib/libnetcdff.so 
+-- Found OpenMP_Fortran: -qopenmp (found version "5.0") 
+-- Found OpenMP: TRUE (found version "5.0") found components: Fortran 
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found crtm: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/crtm-2.4.0.1-csmim4a/lib/libcrtm.a (found version "2.4.0")
+-- Found ZLIB: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/zlib-1.2.13-ynua4de/lib/libz.so (found version "1.2.13") 
+-- Found PNG: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/libpng-1.6.37-3o5v2aq/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/g2-3.4.5-stc3sl5/lib64/libg2_4.a (found version "3.4.5")
+-- Found g2tmpl: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/g2tmpl-1.10.2-ebazmto/lib/libg2tmpl.a (found version "1.10.2")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/w3emc-2.10.0-e3vtojl/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found MPI: TRUE (found version "3.1") found components: Fortran 
+-- Found nemsio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/nemsio-2.5.4-kinowzp/lib64/libnemsio.a (found version "2.5.4")
+-- Found sigio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sigio-2.3.2-mrfjabr/lib/libsigio.a (found version "2.3.0")
+-- Found sp: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/sp-2.5.0-z2pppuo/lib64/libsp_4.a (found version "2.5.0")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/w3emc-2.10.0-e3vtojl/lib64/libw3emc_4.a (found version "2.10.0")
+-- Found wrf_io: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/wrf-io-1.2.0-kl6nu33/lib/libwrf_io.a (found version "1.2.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/build
++ make -j6
+Scanning dependencies of target upp
+[  1%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CMASSI.f.o
+[  2%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CTLBLK.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/machine.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LOOKUP.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GRIDSPEC.f.o
+[  5%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/RQSTFLD.f.o
+[  6%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MASKS_mod.f.o
+[  7%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/PMICRPH.f.o
+[  9%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/RHGRD.f.o
+[  9%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SOIL_mod.f.o
+[ 10%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/params.F.o
+[ 11%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS2D_mod.f.o
+[ 12%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS3D_mod.f.o
+[ 12%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/VRBLS4D_mod.f.o
+[ 12%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/cuparm.f.o
+[ 13%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_ctlblk.F90.o
+[ 13%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_filter.F90.o
+[ 14%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_indices.F90.o
+[ 15%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_read_config.F90.o
+[ 16%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/kinds_mod.F.o
+[ 17%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/svptbl.f.o
+[ 17%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_BOURG.f.o
+[ 17%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ETCALC.f.o
+[ 18%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FGAMMA.f.o
+[ 19%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GEO_ZENITH_ANGLE.f.o
+[ 19%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GET_BITS.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GETGBANDSCATTER.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MSFPS.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/PARA_RANGE.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/POLEAVG.f.o
+[ 20%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/retrieve_index.f.o
+[ 21%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SELECT_CHANNELS.f.o
+[ 21%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SETUP_SERVERS.f.o
+[ 22%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SMOOTH.f.o
+[ 22%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SNFRAC.f.o
+[ 23%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SNFRAC_GFS.f.o
+[ 23%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SPLINE.f.o
+[ 23%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/TABLE.f.o
+[ 24%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/TABLEQ.f.o
+[ 25%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_algo.F90.o
+[ 25%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_compute.F90.o
+[ 26%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_cdf_mod.F90.o
+[ 26%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_ReadSetupParams.F90.o
+[ 27%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_mlmodel.F90.o
+[ 27%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_prob.F90.o
+[ 28%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_interp.F90.o
+[ 29%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/gtg_smoothseams.F90.o
+[ 29%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/map_routines.F90.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/UPP_MATH.f.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/xml_perl_data.f.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/AllGETHERV_GSD.f.o
+[ 30%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/AVIATION.f.o
+[ 31%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/BOUND.f.o
+[ 31%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALDRG.f.o
+[ 32%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALDWP.f.o
+[ 33%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALGUST.f.o
+[ 33%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL.f.o
+[ 34%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL2.f.o
+[ 35%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALHEL3.f.o
+[ 35%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALLCL.f.o
+[ 36%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALMCVG.f.o
+[ 36%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALMICT.f.o
+[ 37%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPBL.f.o
+[ 38%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPBLREGIME.f.o
+[ 38%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPOT.f.o
+[ 39%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALRAD_WCLOUD_newcrtm.f.o
+[ 39%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALRCH.f.o
+[ 40%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALSTRM.f.o
+[ 41%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALTAU.f.o
+[ 41%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALTHTE.f.o
+[ 42%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVESSEL.f.o
+[ 42%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVIS.f.o
+[ 43%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALVIS_GSD.f.o
+[ 44%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_DOMINANT.f.o
+[ 45%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_EXPLICIT.f.o
+[ 45%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT.f.o
+[ 46%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_RAMER.f.o
+[ 47%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALWXT_REVISED.f.o
+[ 47%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CANRES.f.o
+[ 48%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLDFRAC_ZHAO.f.o
+[ 48%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLMAX.f.o
+[ 49%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/COLLECT.f.o
+[ 49%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/COLLECT_LOC.f.o
+[ 50%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/DEWPOINT.f.o
+[ 51%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ETAMP_Q2F.f.o
+[ 52%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/EXCH.f.o
+[ 52%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/EXCH_c_float.f.o
+[ 53%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FIXED.f.o
+[ 54%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/get_postfilename.f.o
+[ 55%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GPVS.f.o
+[ 56%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MAPSSLP.f.o
+[ 56%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2AGL.f.o
+[ 57%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2SIGMA2.f.o
+[ 57%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2SIGMA.f.o
+[ 57%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MICROINIT.F.o
+[ 57%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MIXLEN.f.o
+[ 58%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MPI_FIRST.f.o
+[ 59%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MPI_LAST.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/NGMFLD.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/NGMSLP.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/PARAMR.f.o
+[ 60%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SCLFLD.f.o
+[ 61%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SERVER.f.o
+[ 62%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SLP_new.f.o
+[ 63%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/TRPAUS.f.o
+[ 63%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/TTBLEX.f.o
+[ 64%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/WETBULB.f.o
+[ 65%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/WETFRZLVL.f.o
+[ 66%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ZENSUN.f.o
+[ 67%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/physcons.f.o
+[ 67%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/IFI.F.o
+[ 68%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/native_endianness.f.o
+[ 69%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALUPDHEL.f.o
+[ 70%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/DEALLOCATE.f.o
+[ 71%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ALLOCATE_ALL.f.o
+[ 72%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GFSPOST.F.o
+[ 73%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/ICAOHEIGHT.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/PROCESS.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/GFIP3.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/grib2_module.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FILL_PSETFLD.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SET_LVLSXML.f.o
+[ 74%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/UPP_PHYSICS.f.o
+[ 76%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/READ_xml.f.o
+[ 76%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SET_OUTFLDS.f.o
+[ 77%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CALPW.f.o
+[ 79%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/BNDLYR.f.o
+[ 79%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/CLDRAD.f.o
+[ 80%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FDLVL.f.o
+[ 80%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FRZLVL2.f.o
+[ 81%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/FRZLVL.f.o
+[ 81%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LFMFLD.f.o
+[ 82%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/LFMFLD_GFS.f.o
+[ 83%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2P.f.o
+[ 84%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDL2THANDPV.f.o
+[ 85%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MDLFLD.f.o
+[ 86%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/MISCLN.f.o
+[ 87%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/OTLFT.f.o
+[ 88%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/OTLIFT.f.o
+[ 89%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.dir/SURFCE.f.o
+[ 90%] Linking Fortran static library libupp.a
+[ 90%] Built target upp
+Scanning dependencies of target upp.x
+[ 90%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/intio_tags.f.o
+[ 91%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/wrf_io_flags.f.o
+[ 91%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/INITPOST_NETCDF.f.o
+[ 92%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/WRFPOST.F.o
+[ 94%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/getlvls.f.o
+[ 94%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/retrieve_index.f.o
+[ 94%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/ASSIGNNEMSIOVAR.f.o
+[ 95%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/GETNEMSNDSCATTER.f.o
+[ 96%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/GFSPOSTSIG.F.o
+[ 96%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/INITPOST_GFS_NEMS_MPIIO.f.o
+[ 97%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/INITPOST.F.o
+[ 97%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/getIVariableN.f.o
+[ 98%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/getVariable.f.o
+[ 99%] Building Fortran object sorc/ncep_post.fd/CMakeFiles/upp.x.dir/INITPOST_NEMS.f.o
+[100%] Linking Fortran executable upp.x
+[100%] Built target upp.x
++ make install
+[ 90%] Built target upp
+[100%] Built target upp.x
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/bin/upp.x
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/bin/upp.x" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/upp_physics.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/vrbls4d.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/svptbl_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/vrbls2d.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/masks.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/grib2_module.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/severitymaps.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/ctlblk_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/gtg_filter.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/soil.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/params_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/cloudlayers.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/kinds.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/physcons_post.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/gtg_indices.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/pmicrph_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/derivedfields.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/xml_perl_data.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/cuparm_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/rhgrd_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/rqstfld_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/upp_ifi_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/vrbls3d.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/upp_math.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/gridspec_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/machine_post.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/cmassi_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/icingseverity.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/lookup_mod.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/gtg_ctlblk.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/icingpotential.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/gtg_config.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/include/native_endianness.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/lib/libupp.a
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/share/postxconfig-NT-GFS.txt
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/share/postxconfig-NT-GFS-F00.txt
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/lib/cmake/upp/upp-config.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/lib/cmake/upp/upp-config-version.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/lib/cmake/upp/upp-targets.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_post.fd/tests/install/lib/cmake/upp/upp-targets-release.cmake
++ rm -rf /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/FV3/upp/exec
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/FV3/upp/exec
++ cp ../install/bin/upp.x /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/FV3/upp/exec/.

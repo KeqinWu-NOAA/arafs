@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.30/bin/cc -gcc-name=/usr/bin/gcc-12 -O0 CMakeFiles/mpiserial.x.dir/mpiserial.c.o -o mpiserial.x 

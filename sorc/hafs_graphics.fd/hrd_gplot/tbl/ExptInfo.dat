@@ -1,0 +1,48 @@
+                                  GFS_Forecast,                        Global Forecast System
+                             GFS_Forecast_2022,                        Global Forecast System
+                                 HWRF_Forecast,                                    Oper. HWRF
+                            HWRF_Forecast_2022,                                    Oper. HWRF
+                                ECMWF_Forecast,              ECMWF Integrated Forecast System
+                           ECMWF_Forecast_2022,              ECMWF Integrated Forecast System
+                                 HB20_Realtime,                         2020 Basin-Scale HWRF
+                                 HMON_Forecast,                                    Oper. HMON
+                            HMON_Forecast_2022,                                    Oper. HMON
+                             HAFSV0.2A_2021_RT,   Hurricane Analysis and Forecast System V0.2A
+                             HAFSV0.2B_2021_RT,   Hurricane Analysis and Forecast System V0.2B
+                             HAFSV0.2D_2021_RT,   Hurricane Analysis and Forecast System V0.2D
+                              hafsv0p2d_2021rt,   Hurricane Analysis and Forecast System V0.2D
+                             HAFSV0.2E_2021_RT,   Hurricane Analysis and Forecast System V0.2E
+                              H221_ensemble_00,   Hurricane Analysis and Forecast System V0.2E(00)
+                              H221_ensemble_01,   Hurricane Analysis and Forecast System V0.2E(01)
+                              H221_ensemble_02,   Hurricane Analysis and Forecast System V0.2E(02)
+                              H221_ensemble_03,   Hurricane Analysis and Forecast System V0.2E(03)
+                              H221_ensemble_04,   Hurricane Analysis and Forecast System V0.2E(04)
+                              H221_ensemble_05,   Hurricane Analysis and Forecast System V0.2E(05)
+                              H221_ensemble_06,   Hurricane Analysis and Forecast System V0.2E(06)
+                              H221_ensemble_07,   Hurricane Analysis and Forecast System V0.2E(07)
+                              H221_ensemble_08,   Hurricane Analysis and Forecast System V0.2E(08)
+                              H221_ensemble_09,   Hurricane Analysis and Forecast System V0.2E(09)
+                              H221_ensemble_10,   Hurricane Analysis and Forecast System V0.2E(10)
+                              H221_ensemble_11,   Hurricane Analysis and Forecast System V0.2E(11)
+                              H221_ensemble_12,   Hurricane Analysis and Forecast System V0.2E(12)
+                              H221_ensemble_13,   Hurricane Analysis and Forecast System V0.2E(13)
+                              H221_ensemble_14,   Hurricane Analysis and Forecast System V0.2E(14)
+                              H221_ensemble_15,   Hurricane Analysis and Forecast System V0.2E(15)
+                              H221_ensemble_16,   Hurricane Analysis and Forecast System V0.2E(16)
+                              H221_ensemble_17,   Hurricane Analysis and Forecast System V0.2E(17)
+                              H221_ensemble_18,   Hurricane Analysis and Forecast System V0.2E(18)
+                              H221_ensemble_19,   Hurricane Analysis and Forecast System V0.2E(19)
+                              H221_ensemble_20,   Hurricane Analysis and Forecast System V0.2E(20)
+                             GFP8_GFS_Forecast,   Global Forecast System (v17p8; GF Cu)
+                             MYP8_GFS_Forecast,   Global Forecast System (v17p8; MYNN PBL)
+                             THP8_GFS_Forecast,   Global Forecast System (v17p8; Thompson MP)
+                             C3P8_GFS_Forecast,   Global Forecast System (v17p8; C3 Cu)
+                             HAFSV0.3S_2022_RT,   Hurricane Analysis and Forecast System V0.3S
+                             HAFSV0.3A_2022_RT,   Hurricane Analysis and Forecast System V0.3A
+                        hafsv0p3s_final_retros,   Hurricane Analysis and Forecast System V0.3S (RETROS)
+                            HAFSV0.3Basin_2022,   Hurricane Analysis and Forecast System V0.3Basin
+                             HAFS_v1b_baseline,   HAFS V1.0B Baseline 
+                               hafsv1_fnl_hfsa,   HAFS V1.0A Operational
+                               hafsv1_fnl_hfsb,   HAFS V1.0B Operational
+                                 HFSA_Forecast,   Oper HAFS-A V1.0
+                                 HFSB_Forecast,   Oper HAFS-B V1.0

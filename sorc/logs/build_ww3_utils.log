@@ -1,0 +1,501 @@
++ source ./machine-setup.sh.inc
++ '[' gaeac6 = wcoss2 ']'
++ BUILD_MODE=Release
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ script_dir=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ export RT_COMPILER=intel
++ RT_COMPILER=intel
++ source /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/tests/detect_machine.sh
+++ [[ -n '' ]]
+++ case $(hostname -f) in
++++ hostname -f
+++ MACHINE_ID=gaeac6
+++ [[ gaeac6 == \U\N\K\N\O\W\N ]]
+++ MACHINE_ID=gaeac6
+++ [[ gaeac6 != \U\N\K\N\O\W\N ]]
+++ return
++ source /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/tests/module-setup.sh
+++ set -eu
+++ [[ gaeac6 = jet ]]
+++ [[ gaeac6 = hera ]]
+++ [[ gaeac6 = orion ]]
+++ [[ gaeac6 = hercules ]]
+++ [[ gaeac6 = s4 ]]
+++ [[ gaeac6 = wcoss2 ]]
+++ [[ gaeac6 = acorn ]]
+++ [[ gaeac6 = derecho ]]
+++ [[ gaeac6 = stampede ]]
+++ [[ gaeac6 = gaea ]]
+++ [[ gaeac6 = gaeac6 ]]
+++ source /opt/cray/pe/lmod/8.7.31/init/bash
++++ '[' -z '' ']'
++++ case "$-" in
++++ __lmod_vx=x
++++ '[' -n x ']'
++++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/opt/cray/pe/lmod/lmod/init/bash)
+Shell debugging restarted
++++ unset __lmod_vx
++ ww3switch=model/bin/switch_meshcap
+++ pwd -P
++ finalexecdir=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec
++ [[ ! -d /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec ]]
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec
++ module use /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/modulefiles
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load ufs_gaeac6.intel
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+Lmod is automatically replacing "intel-classic/2023.2.0" with "intel/2023.2.0".
+
+
+Lmod is automatically replacing "intel/2023.2.0" with "intel-classic/2023.2.0".
+
+
+The following have been reloaded with a version change:
+  1) cray-mpich/8.1.28 => cray-mpich/8.1.29
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ cd hafs_forecast.fd/WW3
+++ pwd -P
++ WW3_DIR=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3
++ export WW3_DIR
++ export SWITCHFILE=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/bin/switch_meshcap
++ SWITCHFILE=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/bin/switch_meshcap
++ prep_exes='ww3_grid ww3_prep ww3_prnc ww3_grid ww3_strt ww3_bound ww3_prnc'
++ post_exes='ww3_outp ww3_outf ww3_outp ww3_gint ww3_ounf ww3_ounp ww3_grib'
++ path_build=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD
++ echo 'Forcing a SHRD build'
+Forcing a SHRD build
++ cat /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/bin/switch_meshcap
++ sed -e s/DIST/SHRD/g -e 's/OMPG / /g' -e 's/OMPH / /g' -e 's/MPIT / /g' -e 's/MPI / /g' -e 's/B4B / /g' -e 's/PDLIB / /g' -e s/NOGRB/NCEP2/g /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/tempswitch
++ rm /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/tempswitch
++ echo 'Switch file is /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/switch with switches:'
+Switch file is /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/switch with switches:
++ cat /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/switch
+NCO NCEP2 SHRD    PR3 UQ FLX0 SEED ST4 STAB0 NL1 BT1 DB1 MLIM FLD2 TR0 BS0 RWND WNX1 WNT1 CRX1 CRT1 O0 O1 O2 O3 O4 O5 O6 O7 O14 O15 IC0 IS0 REF0
++ BUILD_TYPE=Release
++ cmake /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3 -DSWITCH=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/switch -DCMAKE_INSTALL_PREFIX=install -DCMAKE_BUILD_TYPE=Release
+-- The C compiler identification is Intel 2021.10.0.20230609
+-- The Fortran compiler identification is Intel 2021.10.0.20230609
+-- Cray Programming Environment 2.7.30 C
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/cray/pe/craype/2.7.30/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Cray Programming Environment 2.7.30 Fortran
+-- Detecting Fortran compiler ABI info
+-- Detecting Fortran compiler ABI info - done
+-- Check for working Fortran compiler: /opt/cray/pe/craype/2.7.30/bin/ftn - skipped
+-- Checking whether /opt/cray/pe/craype/2.7.30/bin/ftn supports Fortran 90
+-- Checking whether /opt/cray/pe/craype/2.7.30/bin/ftn supports Fortran 90 - yes
+-- Build with switch: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/switch
+-- Found MPI_C: /opt/cray/pe/craype/2.7.30/bin/cc (found version "3.1") 
+-- Found MPI_Fortran: /opt/cray/pe/craype/2.7.30/bin/ftn (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- Found NetCDF: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/include;/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/include (found version "4.9.2") found components: Fortran 
+-- FindNetCDF defines targets:
+--   - NetCDF_VERSION [4.9.2]
+--   - NetCDF_PARALLEL [TRUE]
+--   - NetCDF_C_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/bin/nc-config]
+--   - NetCDF::NetCDF_C [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-c-4.9.2-ds5vp7q/lib/libnetcdf.so 
+--   - NetCDF_Fortran_CONFIG_EXECUTABLE [/autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/bin/nf-config]
+--   - NetCDF::NetCDF_Fortran [SHARED] [Root: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a] Lib: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/netcdf-fortran-4.6.1-wj7sr3a/lib/libnetcdff.so 
+-- Found ZLIB: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/zlib-1.2.13-ynua4de/lib/libz.so (found version "1.2.13") 
+-- Found PNG: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/libpng-1.6.37-3o5v2aq/lib64/libpng.so (found version "1.6.37") 
+-- Found g2: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/g2-3.4.5-stc3sl5/lib64/libg2_4.a (found version "3.4.5")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found bacio: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/bacio-2.4.1-fwga4rl/lib/libbacio_4.a (found version "2.4.1")
+-- Found w3emc: /autofs/ncrc-svm1_proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env-c6/install/intel/2023.2.0/w3emc-2.10.0-e3vtojl/lib64/libw3emc_4.a (found version "2.10.0")
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD
++ rc=0
++ ((  rc != 0  ))
++ make -j 8
+Scanning dependencies of target ww3_lib
+[  1%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/constants.F90.o
+[  1%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3metamd.F90.o
+[  3%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3uqckmd.F90.o
+[  3%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_shr_flags.F90.o
+[  4%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3servmd.F90.o
+[  5%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3strkmd.F90.o
+[  6%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gsrumd.F90.o
+[  7%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3arrymd.F90.o
+[  9%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3cspcmd.F90.o
+[  9%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmunitmd.F90.o
+[ 10%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gdatmd.F90.o
+[ 11%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3idatmd.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sbt1md.F90.o
+[ 13%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3odatmd.F90.o
+[ 14%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3adatmd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3dispmd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3timemd.F90.o
+[ 17%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld1md.F90.o
+[ 20%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlgridmd.F90.o
+[ 20%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlbouncmd.F90.o
+[ 20%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlboundmd.F90.o
+[ 21%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmmdatmd.F90.o
+[ 22%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounfmd.F90.o
+[ 23%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlounpmd.F90.o
+[ 24%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlprncmd.F90.o
+[ 25%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmltrncmd.F90.o
+[ 26%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmluprstrmd.F90.o
+[ 27%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3sdb1md.F90.o
+[ 28%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3tidemd.F90.o
+[ 29%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlshelmd.F90.o
+[ 30%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmfinlmd.F90.o
+[ 31%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fldsmd.F90.o
+[ 32%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3src4md.F90.o
+[ 33%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3partmd.F90.o
+[ 34%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3nmlmultimd.F90.o
+[ 35%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3fld2md.F90.o
+[ 35%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3parall.F90.o
+[ 36%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3snl1md.F90.o
+[ 37%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3triamd.F90.o
+[ 38%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdatmd.F90.o
+[ 39%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogrmd.F90.o
+[ 40%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3bullmd.F90.o
+[ 42%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogomd.F90.o
+[ 42%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iorsmdold.F90.o
+[ 43%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iotrmd.F90.o
+[ 45%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iosfmd.F90.o
+[ 45%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3pro3md.F90.o
+[ 45%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3profsmd.F90.o
+[ 46%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3srcemd.F90.o
+[ 47%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3updtmd.F90.o
+[ 48%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wdasmd.F90.o
+[ 49%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmupdtmd.F90.o
+[ 49%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmgridmd.F90.o
+[ 51%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iopomd.F90.o
+[ 51%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iorsmd.F90.o
+[ 52%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iobcmd.F90.o
+[ 53%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmiopomd.F90.o
+[ 54%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminiomd.F90.o
+[ 54%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3gridmd.F90.o
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/src/w3gridmd.F90(6360): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+         ', SDSCUMP =', F3.1,', SDSNUW =', E8.3,', '/,     &
+--------------------------------------------^
+[ 55%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3initmd.F90.o
+[ 56%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wav_grdout.F90.o
+[ 57%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3ounfmetamd.F90.o
+[ 58%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3iogoncdmd.F90.o
+[ 59%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/w3wavemd.F90.o
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/src/w3wavemd.F90(414): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [W3ODATMD]
+    USE W3ODATMD
+--------^
+[ 60%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wminitmd.F90.o
+[ 61%] Building Fortran object model/src/CMakeFiles/ww3_lib.dir/wmwavemd.F90.o
+[ 62%] Linking Fortran static library ../../lib/libww3.a
+[ 62%] Built target ww3_lib
+Scanning dependencies of target ww3_bounc
+Scanning dependencies of target ww3_ounf
+Scanning dependencies of target ww3_systrk
+Scanning dependencies of target ww3_multi
+Scanning dependencies of target ww3_ounp
+Scanning dependencies of target ww3_gspl
+Scanning dependencies of target ww3_prep
+Scanning dependencies of target ww3_uprstr
+[ 63%] Building Fortran object model/src/CMakeFiles/ww3_bounc.dir/ww3_bounc.F90.o
+[ 64%] Building Fortran object model/src/CMakeFiles/ww3_ounf.dir/ww3_ounf.F90.o
+[ 65%] Building Fortran object model/src/CMakeFiles/ww3_systrk.dir/ww3_systrk.F90.o
+[ 66%] Building Fortran object model/src/CMakeFiles/ww3_multi.dir/ww3_multi.F90.o
+[ 67%] Building Fortran object model/src/CMakeFiles/ww3_ounp.dir/ww3_ounp.F90.o
+[ 68%] Building Fortran object model/src/CMakeFiles/ww3_gspl.dir/ww3_gspl.F90.o
+[ 69%] Building Fortran object model/src/CMakeFiles/ww3_prep.dir/ww3_prep.F90.o
+[ 70%] Building Fortran object model/src/CMakeFiles/ww3_uprstr.dir/ww3_uprstr.F90.o
+[ 70%] Linking Fortran executable ../../bin/ww3_multi
+[ 70%] Built target ww3_multi
+Scanning dependencies of target ww3_trnc
+[ 71%] Linking Fortran executable ../../bin/ww3_bounc
+[ 72%] Building Fortran object model/src/CMakeFiles/ww3_trnc.dir/ww3_trnc.F90.o
+[ 73%] Linking Fortran executable ../../bin/ww3_systrk
+[ 73%] Built target ww3_bounc
+Scanning dependencies of target ww3_outf
+[ 74%] Linking Fortran executable ../../bin/ww3_trnc
+[ 75%] Building Fortran object model/src/CMakeFiles/ww3_outf.dir/ww3_outf.F90.o
+[ 76%] Linking Fortran executable ../../bin/ww3_uprstr
+[ 76%] Built target ww3_systrk
+Scanning dependencies of target ww3_bound
+[ 76%] Built target ww3_trnc
+[ 77%] Building Fortran object model/src/CMakeFiles/ww3_bound.dir/ww3_bound.F90.o
+Scanning dependencies of target ww3_outp
+[ 78%] Building Fortran object model/src/CMakeFiles/ww3_outp.dir/ww3_outp.F90.o
+[ 79%] Linking Fortran executable ../../bin/ww3_prep
+[ 80%] Linking Fortran executable ../../bin/ww3_gspl
+[ 80%] Built target ww3_uprstr
+Scanning dependencies of target gx_outf
+[ 80%] Building Fortran object model/src/CMakeFiles/gx_outf.dir/gx_outf.F90.o
+[ 81%] Linking Fortran executable ../../bin/ww3_bound
+[ 81%] Built target ww3_prep
+Scanning dependencies of target ww3_grid
+[ 81%] Built target ww3_gspl
+[ 81%] Building Fortran object model/src/CMakeFiles/ww3_grid.dir/ww3_grid.F90.o
+Scanning dependencies of target ww3_trck
+[ 82%] Building Fortran object model/src/CMakeFiles/ww3_trck.dir/ww3_trck.F90.o
+[ 83%] Linking Fortran executable ../../bin/ww3_grid
+[ 84%] Linking Fortran executable ../../bin/ww3_trck
+[ 84%] Built target ww3_bound
+Scanning dependencies of target ww3_prnc
+[ 85%] Building Fortran object model/src/CMakeFiles/ww3_prnc.dir/ww3_prnc.F90.o
+[ 85%] Built target ww3_grid
+Scanning dependencies of target ww3_grib
+[ 86%] Building Fortran object model/src/CMakeFiles/ww3_grib.dir/ww3_grib.F90.o
+[ 86%] Built target ww3_trck
+Scanning dependencies of target ww3_gint
+[ 87%] Building Fortran object model/src/CMakeFiles/ww3_gint.dir/ww3_gint.F90.o
+[ 88%] Linking Fortran executable ../../bin/ww3_outp
+[ 88%] Built target ww3_outp
+Scanning dependencies of target ww3_strt
+[ 89%] Building Fortran object model/src/CMakeFiles/ww3_strt.dir/ww3_strt.F90.o
+[ 90%] Linking Fortran executable ../../bin/ww3_strt
+[ 91%] Linking Fortran executable ../../bin/gx_outf
+[ 91%] Built target ww3_strt
+Scanning dependencies of target ww3_shel
+[ 92%] Building Fortran object model/src/CMakeFiles/ww3_shel.dir/ww3_shel.F90.o
+[ 92%] Built target gx_outf
+Scanning dependencies of target gx_outp
+[ 93%] Building Fortran object model/src/CMakeFiles/gx_outp.dir/gx_outp.F90.o
+[ 94%] Linking Fortran executable ../../bin/gx_outp
+[ 95%] Linking Fortran executable ../../bin/ww3_grib
+[ 95%] Linking Fortran executable ../../bin/ww3_prnc
+[ 95%] Built target gx_outp
+[ 95%] Built target ww3_prnc
+[ 95%] Built target ww3_grib
+[ 96%] Linking Fortran executable ../../bin/ww3_shel
+[ 97%] Linking Fortran executable ../../bin/ww3_ounp
+[ 98%] Linking Fortran executable ../../bin/ww3_ounf
+[ 98%] Built target ww3_shel
+[ 98%] Built target ww3_ounp
+[ 98%] Built target ww3_ounf
+[ 99%] Linking Fortran executable ../../bin/ww3_outf
+[ 99%] Built target ww3_outf
+[100%] Linking Fortran executable ../../bin/ww3_gint
+[100%] Built target ww3_gint
++ rc=0
++ ((  rc != 0  ))
++ make install
+[ 62%] Built target ww3_lib
+[ 64%] Built target ww3_bounc
+[ 66%] Built target ww3_ounf
+[ 68%] Built target ww3_systrk
+[ 69%] Built target ww3_multi
+[ 71%] Built target ww3_ounp
+[ 73%] Built target ww3_gspl
+[ 75%] Built target ww3_prep
+[ 77%] Built target ww3_uprstr
+[ 79%] Built target ww3_trnc
+[ 81%] Built target ww3_outf
+[ 83%] Built target ww3_bound
+[ 85%] Built target ww3_outp
+[ 86%] Built target gx_outf
+[ 87%] Built target ww3_grid
+[ 89%] Built target ww3_trck
+[ 90%] Built target ww3_prnc
+[ 92%] Built target ww3_grib
+[ 94%] Built target ww3_gint
+[ 96%] Built target ww3_strt
+[ 98%] Built target ww3_shel
+[100%] Built target gx_outp
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_strt
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_strt" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grid
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grid" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_bound
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_bound" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outf
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outf" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outp
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outp" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_trck
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_trck" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grib
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grib" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_gint
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_gint" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/gx_outf
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/gx_outf" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/gx_outp
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/gx_outp" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_uprstr
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_uprstr" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_shel
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_shel" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prep
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prep" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_gspl
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_gspl" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_multi
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_multi" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_systrk
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_systrk" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounf
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounf" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounp
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounp" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_bounc
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_bounc" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_trnc
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_trnc" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prnc
+-- Set runtime path of "/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prnc" to ""
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/lib/libww3.a
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/switch
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3metamd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3profsmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iobcmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmupdtmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3cspcmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3initmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wminitmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iogoncdmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3adatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3ounfmetamd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmwavemd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wav_shr_flags.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmluprstrmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3uqckmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3bullmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3src4md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3gdatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iotrmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlgridmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wav_grdout.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iosfmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlshelmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3wdatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmfinlmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3fld1md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3wdasmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3idatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iogrmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmgridmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3fld2md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3parall.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3wavemd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3tidemd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3odatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3updtmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmunitmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmmdatmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3sbt1md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3fldsmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wminiomd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iopomd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3dispmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlounfmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmltrncmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3partmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3strkmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3srcemd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3triamd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iorsmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlounpmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3arrymd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3pro3md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlprncmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3gridmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3sdb1md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlmultimd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iogomd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3servmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3gsrumd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlbouncmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/wmiopomd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3snl1md.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3nmlboundmd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3iorsmdold.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/w3timemd.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/mod/constants.mod
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-config.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-config-version.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-targets.cmake
+-- Installing: /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/lib/cmake/WW3/WW3-targets-release.cmake
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grid /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prep /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prnc /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grid /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_strt /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_bound /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_prnc /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outf /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_outp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_gint /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounf /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_ounp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ for prog in ${prep_exes} ${post_exes}
++ cp /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD/install/bin/ww3_grib /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec/
++ rc=0
++ ((  rc != 0  ))
++ echo 'executables are in /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec'
+executables are in /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/model/exec
++ echo 'cleaning up /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD'
+cleaning up /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD
++ rm -rf /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_forecast.fd/WW3/build_SHRD

@@ -1,0 +1,922 @@
+nohup: ignoring input
++ source ./machine-setup.sh.inc
++ RUN_ENVIR=dev
++ export BUILD_MODE=Release
++ BUILD_MODE=Release
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ ./build_all.sh
++ export USE_PREINST_LIBS=true
++ USE_PREINST_LIBS=true
++ export BUILD_MODE=Release
++ BUILD_MODE=Release
+++ pwd
++ build_dir=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ logs_dir=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/logs
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/logs
++ mkdir -p ../exec
++ . ./partial_build.sh.inc
+++ Build_prg=("Build_libs" "Build_forecast" "Build_post" "Build_tracker" "Build_utils" "Build_tools" "Build_hycom_utils" "Build_ww3_utils" "Build_gsi")
+++ declare -a Build_prg
+++ verbose=false
+++ num_arg=0
+++ ((  num_arg > 1  ))
+++ ((  num_arg == 1  ))
+++ ((  num_arg == 0  ))
+++ parse_cfg 1 config=hafs_build.cfg Build_libs Build_forecast Build_post Build_tracker Build_utils Build_tools Build_hycom_utils Build_ww3_utils Build_gsi
+++ declare -i n
+++ declare -i num_args
+++ declare -i total_args
+++ declare -a all_prg
+++ total_args=11
+++ num_args=1
+++ ((  num_args == 0  ))
+++ config=config=hafs_build.cfg
+++ [[ config=hafs_build.cfg == \-\-\v\e\r\b\o\s\e ]]
+++ all_prg=()
+++ (( n = num_args + 2 ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ echo config=hafs_build.cfg
+config=hafs_build.cfg
+++ [[ CONFIG=HAFS_BUILD.CFG == ALL ]]
+++ [[ config=hafs_build.cfg == config=* ]]
+++ cfg_file=hafs_build.cfg
+++ false
+++ read cline
+++ clean_line='#'
+++ [[ -z # ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line='# ***** configuration of hafs build *****'
+++ [[ -z # ***** configuration of hafs build ***** ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ clean_line='Building libraries (libs) ............................. no'
+++ [[ -z Building libraries (libs) ............................. no ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=libs
+++ clean_line='Building libraries (libs) ............................. no'
+++ build_action=true
+++ last5='.. no'
+++ [[ .. no == \.\ \y\e\s ]]
+++ last4='. no'
+++ [[ . no == \.\ \n\o ]]
+++ build_action=false
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_libs ]]
+++ found=true
+++ eval Build_libs=false
++++ Build_libs=false
+++ break
+++ true
+++ read cline
+++ clean_line='Building forecast (forecast) .......................... yes'
+++ [[ -z Building forecast (forecast) .......................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=forecast
+++ clean_line='Building forecast (forecast) .......................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_forecast ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_forecast ]]
+++ found=true
+++ eval Build_forecast=true
++++ Build_forecast=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building post (post) .................................. yes'
+++ [[ -z Building post (post) .................................. yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=post
+++ clean_line='Building post (post) .................................. yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_post ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_post ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_post ]]
+++ found=true
+++ eval Build_post=true
++++ Build_post=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building tracker (tracker) ............................ yes'
+++ [[ -z Building tracker (tracker) ............................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=tracker
+++ clean_line='Building tracker (tracker) ............................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_tracker ]]
+++ found=true
+++ eval Build_tracker=true
++++ Build_tracker=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building utils (utils) ................................ yes'
+++ [[ -z Building utils (utils) ................................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=utils
+++ clean_line='Building utils (utils) ................................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_utils ]]
+++ found=true
+++ eval Build_utils=true
++++ Build_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building tools (tools) ................................ yes'
+++ [[ -z Building tools (tools) ................................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=tools
+++ clean_line='Building tools (tools) ................................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_tools ]]
+++ found=true
+++ eval Build_tools=true
++++ Build_tools=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building gsi (gsi) .................................... yes'
+++ [[ -z Building gsi (gsi) .................................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=gsi
+++ clean_line='Building gsi (gsi) .................................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_ww3_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_gsi == \B\u\i\l\d\_gsi ]]
+++ found=true
+++ eval Build_gsi=true
++++ Build_gsi=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building hycom_utils (hycom_utils) .................... yes'
+++ [[ -z Building hycom_utils (hycom_utils) .................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=hycom_utils
+++ clean_line='Building hycom_utils (hycom_utils) .................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_hycom_utils ]]
+++ found=true
+++ eval Build_hycom_utils=true
++++ Build_hycom_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building ww3_utils (ww3_utils) ........................ yes'
+++ [[ -z Building ww3_utils (ww3_utils) ........................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=ww3_utils
+++ clean_line='Building ww3_utils (ww3_utils) ........................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_ww3_utils == \B\u\i\l\d\_ww3_utils ]]
+++ found=true
+++ eval Build_ww3_utils=true
++++ Build_ww3_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ clean_line='# -- END --'
+++ [[ -z # -- END -- ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ false
+++ echo '=== end of partial build setting ==='
++ false
++ true
++ echo ' .... Building forecast .... '
+ .... Building forecast .... 
++ ./build_forecast.sh
++ true
++ echo ' .... Building post .... '
+ .... Building post .... 
++ ./build_post.sh
++ true
++ echo ' .... Building tracker .... '
+ .... Building tracker .... 
++ ./build_tracker.sh
++ true
++ echo ' .... Building utils .... '
+ .... Building utils .... 
++ ./build_utils.sh
++ true
++ echo ' .... Building tools .... '
+ .... Building tools .... 
++ ./build_tools.sh
++ true
++ echo ' .... Building gsi .... '
+ .... Building gsi .... 
++ ./build_gsi.sh
++ true
++ echo ' .... Building hycom_utils .... '
+ .... Building hycom_utils .... 
++ ./build_hycom_utils.sh
++ true
++ echo ' .... Building ww3_utils .... '
+ .... Building ww3_utils .... 
++ ./build_ww3_utils.sh
++ echo
+
++ echo ' .... Build system finished .... '
+ .... Build system finished .... 
++ ./install_all.sh
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ CP='/bin/cp -rp'
++ . ./partial_build.sh.inc
+++ Build_prg=("Build_libs" "Build_forecast" "Build_post" "Build_tracker" "Build_utils" "Build_tools" "Build_hycom_utils" "Build_ww3_utils" "Build_gsi")
+++ declare -a Build_prg
+++ verbose=false
+++ num_arg=0
+++ ((  num_arg > 1  ))
+++ ((  num_arg == 1  ))
+++ ((  num_arg == 0  ))
+++ parse_cfg 1 config=hafs_build.cfg Build_libs Build_forecast Build_post Build_tracker Build_utils Build_tools Build_hycom_utils Build_ww3_utils Build_gsi
+++ declare -i n
+++ declare -i num_args
+++ declare -i total_args
+++ declare -a all_prg
+++ total_args=11
+++ num_args=1
+++ ((  num_args == 0  ))
+++ config=config=hafs_build.cfg
+++ [[ config=hafs_build.cfg == \-\-\v\e\r\b\o\s\e ]]
+++ all_prg=()
+++ (( n = num_args + 2 ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ all_prg+=(${!n})
+++ (( n++  ))
+++ (( n <= total_args ))
+++ echo config=hafs_build.cfg
+config=hafs_build.cfg
+++ [[ CONFIG=HAFS_BUILD.CFG == ALL ]]
+++ [[ config=hafs_build.cfg == config=* ]]
+++ cfg_file=hafs_build.cfg
+++ false
+++ read cline
+++ clean_line='#'
+++ [[ -z # ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line='# ***** configuration of hafs build *****'
+++ [[ -z # ***** configuration of hafs build ***** ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ clean_line='Building libraries (libs) ............................. no'
+++ [[ -z Building libraries (libs) ............................. no ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=libs
+++ clean_line='Building libraries (libs) ............................. no'
+++ build_action=true
+++ last5='.. no'
+++ [[ .. no == \.\ \y\e\s ]]
+++ last4='. no'
+++ [[ . no == \.\ \n\o ]]
+++ build_action=false
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_libs ]]
+++ found=true
+++ eval Build_libs=false
++++ Build_libs=false
+++ break
+++ true
+++ read cline
+++ clean_line='Building forecast (forecast) .......................... yes'
+++ [[ -z Building forecast (forecast) .......................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=forecast
+++ clean_line='Building forecast (forecast) .......................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_forecast ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_forecast ]]
+++ found=true
+++ eval Build_forecast=true
++++ Build_forecast=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building post (post) .................................. yes'
+++ [[ -z Building post (post) .................................. yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=post
+++ clean_line='Building post (post) .................................. yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_post ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_post ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_post ]]
+++ found=true
+++ eval Build_post=true
++++ Build_post=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building tracker (tracker) ............................ yes'
+++ [[ -z Building tracker (tracker) ............................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=tracker
+++ clean_line='Building tracker (tracker) ............................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_tracker ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_tracker ]]
+++ found=true
+++ eval Build_tracker=true
++++ Build_tracker=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building utils (utils) ................................ yes'
+++ [[ -z Building utils (utils) ................................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=utils
+++ clean_line='Building utils (utils) ................................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_utils ]]
+++ found=true
+++ eval Build_utils=true
++++ Build_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building tools (tools) ................................ yes'
+++ [[ -z Building tools (tools) ................................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=tools
+++ clean_line='Building tools (tools) ................................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_tools ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_tools ]]
+++ found=true
+++ eval Build_tools=true
++++ Build_tools=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building gsi (gsi) .................................... yes'
+++ [[ -z Building gsi (gsi) .................................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=gsi
+++ clean_line='Building gsi (gsi) .................................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_ww3_utils == \B\u\i\l\d\_gsi ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_gsi == \B\u\i\l\d\_gsi ]]
+++ found=true
+++ eval Build_gsi=true
++++ Build_gsi=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building hycom_utils (hycom_utils) .................... yes'
+++ [[ -z Building hycom_utils (hycom_utils) .................... yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=hycom_utils
+++ clean_line='Building hycom_utils (hycom_utils) .................... yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_hycom_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_hycom_utils ]]
+++ found=true
+++ eval Build_hycom_utils=true
++++ Build_hycom_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line='Building ww3_utils (ww3_utils) ........................ yes'
+++ [[ -z Building ww3_utils (ww3_utils) ........................ yes ]]
+++ [[ B == \# ]]
+++ false
+++ first9='Building '
+++ [[ building  == \b\u\i\l\d\i\n\g\  ]]
++++ sed -e 's/.*(\(.*\)).*/\1/'
+++ short_prg=ww3_utils
+++ clean_line='Building ww3_utils (ww3_utils) ........................ yes'
+++ build_action=true
+++ last5='. yes'
+++ [[ . yes == \.\ \y\e\s ]]
+++ build_action=true
+++ last4=' yes'
+++ [[  yes == \.\ \n\o ]]
+++ found=false
+++ for prg in ${all_prg[@]}
+++ [[ Build_libs == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_forecast == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_post == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tracker == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_utils == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_tools == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_hycom_utils == \B\u\i\l\d\_ww3_utils ]]
+++ for prg in ${all_prg[@]}
+++ [[ Build_ww3_utils == \B\u\i\l\d\_ww3_utils ]]
+++ found=true
+++ eval Build_ww3_utils=true
++++ Build_ww3_utils=true
+++ break
+++ true
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ clean_line='# -- END --'
+++ [[ -z # -- END -- ]]
+++ [[ # == \# ]]
+++ read cline
+++ clean_line=
+++ [[ -z '' ]]
+++ read cline
+++ false
+++ echo '=== end of partial build setting ==='
++ true
++ /bin/cp -rp hafs_forecast.fd/tests/fv3_hafs_mom6.exe ../exec/hafs_forecast_mom6.x
++ /bin/cp -rp hafs_forecast.fd/tests/fv3_hafs_hycom.exe ../exec/hafs_forecast_hycom.x
++ true
++ /bin/cp -rp hafs_utils.fd/exec/chgres_cube ../exec/hafs_utils_chgres_cube.x
++ /bin/cp -rp hafs_utils.fd/exec/orog ../exec/hafs_utils_orog.x
++ /bin/cp -rp hafs_utils.fd/exec/orog_gsl ../exec/hafs_utils_orog_gsl.x
++ /bin/cp -rp hafs_utils.fd/exec/sfc_climo_gen ../exec/hafs_utils_sfc_climo_gen.x
++ /bin/cp -rp hafs_utils.fd/exec/global_equiv_resol ../exec/hafs_utils_global_equiv_resol.x
++ /bin/cp -rp hafs_utils.fd/exec/regional_esg_grid ../exec/hafs_utils_regional_esg_grid.x
++ /bin/cp -rp hafs_utils.fd/exec/make_hgrid ../exec/hafs_utils_make_hgrid.x
++ /bin/cp -rp hafs_utils.fd/exec/make_solo_mosaic ../exec/hafs_utils_make_solo_mosaic.x
++ /bin/cp -rp hafs_utils.fd/exec/fregrid ../exec/hafs_utils_fregrid.x
++ /bin/cp -rp hafs_utils.fd/exec/filter_topo ../exec/hafs_utils_filter_topo.x
++ /bin/cp -rp hafs_utils.fd/exec/shave ../exec/hafs_utils_shave.x
++ true
++ /bin/cp -rp hafs_post.fd/exec/upp.x ../exec/hafs_post.x
++ true
++ /bin/cp -rp hafs_tracker.fd/exec/gettrk.x ../exec/hafs_tracker_gettrk.x
++ /bin/cp -rp hafs_tracker.fd/exec/tave.x ../exec/hafs_tracker_tave.x
++ /bin/cp -rp hafs_tracker.fd/exec/vint.x ../exec/hafs_tracker_vint.x
++ /bin/cp -rp hafs_tracker.fd/exec/supvit.x ../exec/hafs_tracker_supvit.x
++ true
++ /bin/cp -rp hafs_tools.fd/exec/hafs_nhc_products.x ../exec/hafs_tools_nhc_products.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_obs_preproc.x ../exec/hafs_tools_obs_preproc.x
++ /bin/cp -rp hafs_tools.fd/exec/mpiserial.x ../exec/hafs_tools_mpiserial.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_change_prepbufr_qm_typ.x ../exec/hafs_tools_change_prepbufr_qm_typ.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_change_prepbufr_qm_in_circle.x ../exec/hafs_tools_change_prepbufr_qm_in_circle.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_change_prepbufr_rm_typ_in_circle.x ../exec/hafs_tools_change_prepbufr_rm_typ_in_circle.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_datool.x ../exec/hafs_tools_datool.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_create_trak_guess.x ../exec/hafs_tools_vi_create_trak_guess.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_create_trak_init.x ../exec/hafs_tools_vi_create_trak_init.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_split.x ../exec/hafs_tools_vi_split.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_anl_pert.x ../exec/hafs_tools_vi_anl_pert.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_anl_combine.x ../exec/hafs_tools_vi_anl_combine.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_anl_enhance.x ../exec/hafs_tools_vi_anl_enhance.x
++ /bin/cp -rp hafs_tools.fd/exec/hafs_vi_anl_bogus.x ../exec/hafs_tools_vi_anl_bogus.x
++ true
++ /bin/cp -rp hafs_gsi.fd/install/bin/gsi.x ../exec/hafs_gsi.x
++ /bin/cp -rp hafs_gsi.fd/install/bin/enkf.x ../exec/hafs_gsi_enkf.x
++ true
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_get_rtofs ../exec/hafs_hycom_utils_get_rtofs.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv2data3z ../exec/hafs_hycom_utils_archv2data3z.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv2data2d ../exec/hafs_hycom_utils_archv2data2d.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv3z2nc ../exec/hafs_hycom_utils_archv3z2nc.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_gfs2ofs2 ../exec/hafs_hycom_utils_gfs2ofs2.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_rtofs_subregion ../exec/hafs_hycom_utils_rtofs_subregion.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv2restart ../exec/hafs_hycom_utils_archv2restart.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_restart2restart ../exec/hafs_hycom_utils_restart2restart.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_timeinterp_forcing ../exec/hafs_hycom_utils_timeinterp_forcing.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv2ncdf3z ../exec/hafs_hycom_utils_archv2ncdf3z.x
++ /bin/cp -rp hafs_hycom_utils.fd/exec/hafs_archv2ncdf2d ../exec/hafs_hycom_utils_archv2ncdf2d.x
++ true
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_grid ../exec/hafs_ww3_grid.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_strt ../exec/hafs_ww3_strt.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_prep ../exec/hafs_ww3_prep.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_outf ../exec/hafs_ww3_outf.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_outp ../exec/hafs_ww3_outp.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_grib ../exec/hafs_ww3_grib.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_gint ../exec/hafs_ww3_gint.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_bound ../exec/hafs_ww3_bound.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_prnc ../exec/hafs_ww3_prnc.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_ounf ../exec/hafs_ww3_ounf.x
++ /bin/cp -rp hafs_forecast.fd/WW3/model/exec/ww3_ounp ../exec/hafs_ww3_ounp.x
++ echo
+
++ echo ' .... Install system finished .... '
+ .... Install system finished .... 
++ exit
++ ./link_fix.sh dev
++ source ./machine-setup.sh.inc
++ RUN_ENVIR=dev
+++ pwd
++ cwd=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
+++ pwd
++ HOMEhafs=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/..
++ FIXhafs=/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/../fix
++ FIXversion=20250205
++ mkdir -p /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/../fix
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/../fix
++ mkdir -p fix_fv3
++ '[' gaeac6 == wcoss2 ']'
++ '[' gaeac6 == hera ']'
++ '[' gaeac6 == orion ']'
++ '[' gaeac6 == hercules ']'
++ '[' gaeac6 == jet ']'
++ '[' gaeac6 == gaeac6 ']'
++ FIXROOT=/gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_am ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_aer ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_lut ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_orog ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_fv3_gmted2010 ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_sfc_climo ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_vi ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_hycom ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_mom6 ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_ww3 ./
++ for subdir in fix_am fix_aer fix_lut fix_orog fix_fv3_gmted2010 fix_sfc_climo fix_vi fix_hycom fix_mom6 fix_ww3 fix_cdeps
++ '[' DEV '!=' NCO ']'
++ ln -sf /gpfs/f6/drsa-hurr1/world-shared/noscrub/hafs-fix-files/hafs-20250205-fix/fix/fix_cdeps ./
++ echo done
+done
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/../parm
++ '[' DEV '!=' NCO ']'
++ '[' '!' -e system.conf ']'
++ echo 'Copying system.conf. Please check and update it if needed.'
+Copying system.conf. Please check and update it if needed.
++ cp -p system.conf.gaeac6 system.conf
++ cd /gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc
++ exit

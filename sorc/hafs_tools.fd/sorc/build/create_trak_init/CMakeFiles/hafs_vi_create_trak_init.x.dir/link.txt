@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.30/bin/ftn -O3 -traceback -fp-model precise -assume byterecl -convert big_endian -gcc-name=/usr/bin/gcc-12 CMakeFiles/hafs_vi_create_trak_init.x.dir/create_trak_init.f90.o -o hafs_vi_create_trak_init.x 

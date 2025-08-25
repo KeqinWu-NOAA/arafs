@@ -1,0 +1,11 @@
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv2data2d
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv2data3z
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv3z2nc
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv2restart
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_rtofs_subregion
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_gfs2ofs2
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_timeinterp_forcing
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_restart2restart
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_get_rtofs
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv2ncdf2d
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_hycom_utils.fd/exec/hafs_archv2ncdf3z

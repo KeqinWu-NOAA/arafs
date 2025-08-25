@@ -1,0 +1,2 @@
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_tools.fd/exec/mpiserial.x
+/gpfs/f6/drsa-hurr1/world-shared/save/Bin.Liu/hafsv2p1_phase3/sorc/hafs_tools.fd/exec/hafs_nhc_products.x

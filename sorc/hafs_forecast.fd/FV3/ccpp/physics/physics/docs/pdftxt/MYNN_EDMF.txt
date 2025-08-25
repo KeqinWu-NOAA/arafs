@@ -1,0 +1,82 @@
+/**
+\page MYNNEDMF MYNN-EDMF Boundary Layer and Shallow Cloud Scheme
+\section mynnedmf_descrip  Description
+
+The Mellor-Yamada-Nakanishi-Niino (Nakanishi and Niino 2009 \cite NAKANISHI_2009) eddy
+diffusivity-mass flux (EDMF) scheme was implemented into CCPP to introduce an alternative
+turbulent kinetic energy (TKE)-based planetary boundary layer (PBL) scheme which could 
+serve as a candidate PBL parameterization for future operational implementations of the Unified Forecast System.
+The MYNN-EDMF is currently employed in NOAA's operational Rapid Refresh (RAP; Benjamin et al.2016 \cite Benjamin_2016)
+and High-Resolution Rapid Refresh (HRRR) forecast systems.
+
+The original MYNN scheme was demonstrated to be an improvement over predecessor Mellor-Yamada-type 
+PBL schemes (e.g., Mellor and Yamada 1974,1982 \cite Mellor_1974 \cite Mellor_1982) when compared against large-eddy
+simulation (LES) of a convective PBL (Nakanishi and Niino 2004, 2009 \cite Nakanishi_2004 \cite NAKANISHI_2009), the
+prediction of advection fog (Nakanishi and Niino 2006 \cite Nakanishi_2006), and for the representation of coastal 
+barrier jets (Olson and Brown 2009 \cite olson_and_brown_2009). The MYNN scheme can be configured to function at
+level 2.5, 2.6 (current default) or 3.0 closure and includes a partial-condensation scheme (also known as a cloud PDF or a statistical-cloud
+scheme) to represent the effects of subgrid-scale(SGS) clouds on the buoyancy flux (Nakanishi and Niino 2004, 2006, and 2009
+\cite Nakanishi_2004 \cite Nakanishi_2006 \cite NAKANISHI_2009). The closure constants for the original MYNN scheme 
+were tuned to a database of LES as opposed to observational data.
+
+The MYNN-EDMF scheme has been extensively developed to improve upon the forecast skill of the original MYNN,
+largely driven by requirements to improve forecast skill in support of the NOAA's National Weather Service (NWS),
+the Federal Aviation Administration (FAA) and users within the renewable-energy industry.Specifically, fundamental
+changes were made to the formulation of the mixing lengths and representation of subgrid-scale(SGS) clouds, but new components have also
+been added to improve the representation of non-local mixing, the turbulence interaction with clouds, and the coupling to other 
+model components (i.e., radiation). A description of the changes to the MYNN scheme are available in Olson et al.(2019) 
+\cite https://doi.org/10.25923/n9wm-be49.
+
+\section intra_mynnpbl Intraphysics Communication
+- \ref SGSCLOUD_page
+
+The SGS clouds produced by the MYNN-EDMF scheme are coupled to the longwave and shortwave radiation schemes
+if the namelist parameter \p icloud_bl is set to 1. In this case, the SGS cloud fraction, \p CLDFRA_BL, and the SGS
+cloud-mixing ratio, \p QC_BL, are added to the microphysics arrays within the radiation driver (mynnrad_pre_run()). 
+The following two steps are performed: 
+
+(1) Use either Xu and Randall (1996) \cite xu_and_randall_1996 or Chaboureau and Bechtold (2005) \cite Chaboureau_2005 cloud fraction for 
+the convection scheme subgrid clouds, chosen by the switch \p conv_cf_opt = 0: CB2005, 1: XR1996. 
+Note that the MYNN-EDMF PBL scheme subgrid clouds input into this scheme are 
+already partitioned into qc and qi and already have assigned cloud fractions, but now qi is further partitioned into
+qi and qsnow.
+
+
+(2) if the resolved-scale cloud liquid (\f$q_c\f$) is less than \f$10^{-6}kg kg^{-1}\f$ 
+, and there exists a nonzero SGS cloud fraction, then the SGS components are
+added to their respective resolved-scale components by a temperature weighting, according to linear approximation
+of Hobbs et al.(1974) \cite HOBBS_1974 . Next the frozen species are crudely split into 50% ice and 50% snow below  approximately
+700 hPa. The percentage of snow decreases with altitude and tapers off at approximately 300 hPa:
+\f[
+ W_{snow}=min(0.5,max((P-30000,0.0)/140000.0)
+\f]
+
+\f[
+ W_{ice}=1.0-W_{snow}
+\f]
+
+Next the SGS cloud water, liquid, and snow are sorted as:
+
+\f$q_c\f$=QC_BL*CLDFRA_BL
+
+\f$q_i\f$=QI_BL*\f$W_{ice}\f$*CLDFRA_BL
+
+\f$q_s\f$=QI_BL*\f$W_{snow}\f$*CLDFRA_BL
+
+This allows using a single 3-D array for both SGS cloud water,ice and snow. The updated \f$q_{c}\f$,\f$q_{i}\f$, \f$q_{s}\f$and
+\p CLDFRA are then used as input into the radiation schemes. After exiting the radiation schemes, the original 
+values of \f$q_c, q_i, q_s\f$  and \p CLDFRA are restored, so the SGS clouds do not impact the resolved-scale moisture budget.
+
+
+The MYNN-EDMF CCPP-compliant interface:
+\ref arg_table_mynnedmf_wrapper_run
+
+\section gen_mynnedmf_conv General Algorithm
+
+\image html  MYNN-EDMF_call_order.png "Figure 1.The order of subroutines within the MYNN-EDMF (Courtesy of J.B. Olson). The green rectangles within the main subroutine (mynn_bl_driver()) represent subroutine calls. The blue rectangles represent tasks coded within the main driver. A brief description is shown on the right " width=600
+
+
+\ref gen_mynn_bl_driver
+
+
+*/
