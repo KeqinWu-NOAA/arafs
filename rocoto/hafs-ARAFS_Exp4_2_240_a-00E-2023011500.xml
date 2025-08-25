@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE workflow [
+
+  <!-- Set some variables for use later: -->
+
+  <!ENTITY COM_SCRUB_TIME "10800">
+  <!ENTITY WORK_SCRUB_TIME "3600">
+  <!ENTITY CYCLE_THROTTLE "5">
+  <!ENTITY TASK_THROTTLE "120">
+
+  <!-- Maximum number of times to try various jobs -->
+  <!ENTITY MAX_TRIES_TRANSFER "6"> <!-- pulling data over network -->
+  <!ENTITY MAX_TRIES_BIG_JOBS "1"> <!-- forecast or other huge jobs -->
+  <!ENTITY MAX_TRIES "1"> <!-- everything else -->
+
+ <!-- Extra variables to send to the exhwrf_launch.py -->
+  <!ENTITY MORE_LAUNCH_VARS "&#34;config.EXPT=arafs3km&#34; &#34;config.SUBEXPT=&#34; /gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/parm/arafs_exp4a_2.conf &#34;config.scrub_work=no&#34; &#34;config.scrub_com=no&#34; &#34;config.archive=none&#34; &#34;config.cpu_account=drsa-hurr4&#34; &#34;config.EXPT=arafs3km&#34; &#34;config.SUBEXPT=ARAFS_Exp4_2_240_a&#34; &#34;config.ENS=99&#34; &#34;config.GFSVER=PROD2021&#34; &#34;config.run_analysis_merge=no&#34; &#34;forecast.do_sppt=.false.&#34; &#34;forecast.do_shum=.false.&#34; &#34;forecast.do_skeb=.false.&#34; &#34;forecast.lndp_type=0&#34; &#34;forecast.write_groups=3&#34; &#34;forecast.write_tasks_per_group=40&#34; &#34;rocotostr.FORECAST_RESOURCES=FORECAST_RESOURCES_1200PE&#34; &#34;forecast.all_tasks=1200&#34; &#34;forecast.atm_tasks=1200&#34; &#34;forecast.ocn_tasks=0&#34; &#34;forecast.restart_interval=240&#34; &#34;config.NHRS=240&#34; &#34;config.NOUTHRS=3&#34; &#34;config.NBDYHRS=3&#34;">
+
+  <!-- Multistorm IDs -->
+  <!ENTITY MULTISTORM "NO">
+  <!ENTITY BASINS "">
+  <!ENTITY MULTISTORM_SIDS "">
+  <!ENTITY RENUM "">
+  <!ENTITY FAKE_STORM "storm1">
+  <!ENTITY STORMS "storm1 storm2 storm3 storm4 storm5 storm6">
+  <!ENTITY REAL_STORMS "storm2 storm3 storm4 storm5 storm6">
+
+  <!-- Storm we are going to run -->
+  <!ENTITY SID "00E">
+  <!ENTITY sidlc "00e">
+  <!ENTITY STORMLABEL "storm1">
+  <!ENTITY CASE_ROOT "HISTORY">
+
+  <!-- scrub config -->
+  <!ENTITY SCRUB_WORK "NO">
+  <!ENTITY SCRUB_COM "NO">
+
+  <!-- Directory paths and experiment names. -->
+  <!ENTITY WHERE_AM_I "gaeac6">
+  <!ENTITY PRE      "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/ush/rocoto_pre_job.sh">
+  <!ENTITY RUN      "arafs">
+  <!ENTITY EXPT     "arafs3km">
+  <!ENTITY SUBEXPT  "ARAFS_Exp4_2_240_a">
+  <!ENTITY HOMEhafs "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/&EXPT;">
+  <!ENTITY PARMhafs "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/parm">
+  <!ENTITY JOBhafs  "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/jobs">
+  <!ENTITY EXhafs   "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/scripts">
+  <!ENTITY USHhafs  "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs3km/ush">
+  <!ENTITY FIXhafs  "&HOMEhafs;/fix">
+  <!ENTITY EXEChafs "&HOMEhafs;/exec">
+  <!ENTITY WORKhafs "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/scrub/&SUBEXPT;/@Y@m@d@H/&SID;">
+  <!ENTITY COMhafs  "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/scrub/&SUBEXPT;/com/@Y@m@d@H/&SID;">
+  <!ENTITY LOGhafs  "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/scrub/&SUBEXPT;/log">
+
+  <!ENTITY GFSVER   "PROD2021">
+  <!ENTITY COMgfs   "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs-input/ctrl">
+  <!ENTITY COMgfs_ocean   "/gpfs/f6/drsa-hurr2/world-shared/noscrub/Jiayi.Peng/input/COMGFSv16">
+  <!ENTITY COMrtofs "/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/hafs-input/COMRTOFSv2">
+
+  <!-- The output conf file for each cycle: -->
+  <!ENTITY CONFhafs "&COMhafs;/&STORMLABEL;.conf">
+  <!ENTITY HOLDVARS "&COMhafs;/&STORMLABEL;.holdvars.txt">
+
+  <!-- Enabling or disabling  parts of the workflow: -->
+  <!ENTITY FETCH_INPUT "NO">
+  <!ENTITY RUN_ATM_MVNEST "NO">
+  <!ENTITY RUN_ATM_MVNEST_ENS "NO">
+  <!ENTITY RUN_ATM_INIT "NO">
+  <!ENTITY RUN_ATM_INIT_FGAT "NO">
+  <!ENTITY RUN_ATM_INIT_ENS "NO">
+  <!ENTITY RUN_ATM_MERGE "NO">
+  <!ENTITY RUN_ATM_MERGE_FGAT "NO">
+  <!ENTITY RUN_ATM_MERGE_ENS "NO">
+  <!ENTITY RUN_ATM_VI "NO">
+  <!ENTITY RUN_ATM_VI_FGAT "NO">
+  <!ENTITY RUN_ATM_VI_ENS "NO">
+  <!ENTITY RUN_FGAT "NO">
+  <!ENTITY RUN_GSI "NO">
+  <!ENTITY GSI_D01 "NO">
+  <!ENTITY GSI_D02 "NO">
+  <!ENTITY GSI_D03 "NO">
+  <!ENTITY RUN_ENSDA "NO">
+  <!ENTITY RUN_ENKF "NO">
+  <!ENTITY RUN_ANALYSIS_MERGE "NO">
+  <!ENTITY RUN_ANALYSIS_MERGE_ENS "NO">
+  <!ENTITY RUN_OCEAN "NO">
+  <!ENTITY RUN_WAVE "NO">
+  <!ENTITY RUN_DATM "NO">
+  <!ENTITY RUN_DOCN "NO">
+  <!ENTITY RUN_GEMPAK "NO">
+  <!ENTITY RUN_HRDGRAPHICS "NO">
+  <!ENTITY RUN_EMCGRAPHICS "NO">
+  <!ENTITY MAKE_MESH_ATM "NO">
+  <!ENTITY MAKE_MESH_OCN "NO">
+
+  <!ENTITY ENS_SIZE "000">
+  <!ENTITY ENSIDS "000">
+  <!ENTITY ENS "99">
+
+  <!ENTITY gtype "regional">
+  <!ENTITY FORECAST_RESOURCES "&FORECAST_RESOURCES_1200PE;">
+  <!ENTITY FORECAST_ENS_RESOURCES "&FORECAST_RESOURCES_220PE;">
+
+  <!-- CPU account name -->
+  <!ENTITY CPU_ACCOUNT "drsa-hurr4">
+
+  <!-- Load the env_vars.ent into ENV_VARS so we can set variables
+  common to all jobs. -->
+  <!ENTITY ENV_VARS SYSTEM "env_vars.ent">
+
+  <!-- Site that we are currently running on -->
+  <!ENTITY % SITES    SYSTEM "sites/all.ent">
+  %SITES;
+
+  <!ENTITY % SITE_DEFAULTS SYSTEM "sites/defaults.ent">
+  %SITE_DEFAULTS;
+
+  <!ENTITY % CUSTOM_SITE SYSTEM "sites/gaeaC6_ensemble.ent">
+  %CUSTOM_SITE;
+
+]>
+
+<!-- Workflow below here -->
+
+<workflow realtime="F" cyclethrottle="&CYCLE_THROTTLE;"
+          scheduler="&SCHEDULER;" taskthrottle="&TASK_THROTTLE;">
+
+  <cycledef>202301150000 202301150000 06:00:00</cycledef> 
+
+
+  <log><cyclestr>&LOGhafs;/rocoto_@Y@m@d@H.log</cyclestr></log>
+
+  <task name="launch" maxtries="99">
+    <!--<command>&PRE; &EXhafs;/exhafs_launch.py &SID; <cyclestr>@Y@m@d@H</cyclestr></command>-->
+    <command>&PRE; &EXhafs;/exhafs_launch.py &MULTISTORM_SIDS; &BASINS; &RENUM; <cyclestr>@Y@m@d@H &SID; &CASE_ROOT; '&PARMhafs;' config.EXPT='&EXPT;' config.SUBEXPT='&SUBEXPT;' config.HOMEhafs='&HOMEhafs;' dir.USHhhafs='&USHhafs;' &MORE_LAUNCH_VARS; </cyclestr></command>
+    <jobname>hafs_launch_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_launch.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_PE;</queue>
+    &PE_EXTRA;
+    &CLUSTER_COMPUTE;
+    &CORES_EXTRA;
+    &LAUNCH_RESOURCES;
+    &ENV_VARS;
+
+    <dependency>
+      <and>
+        <!-- Cycling dependency: do not start until the prior cycle's
+        launch job is done, unless there is no prior cycle. -->
+        <or>
+          <taskdep task="launch" cycle_offset="-6:00:00"/>
+          <not>
+            <cycleexistdep cycle_offset="-6:00:00"/>
+          </not>
+        </or>
+        <!-- AND... don't start until 3:20 past the synoptic time.  The
+        GFS does not start until then, so there is little point to
+        starting earlier. -->
+        <timedep><cyclestr offset="3:20:00">@Y@m@d@H@M@S</cyclestr></timedep>
+      </and>
+    </dependency>
+
+    <!--
+    <rewind>
+      <sh>&USHhafs;/hafs_scrub.py '<cyclestr>&COMhafs;</cyclestr>' '<cyclestr>&WORKhafs;</cyclestr>'</sh>
+    </rewind>
+    -->
+  </task>
+
+  <task name="input" maxtries="&MAX_TRIES_TRANSFER;">
+    <command>&PRE; &EXhafs;/exhafs_input.py</command>
+    <jobname>hafs_input_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_input.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERVICE;</queue>
+    &SERVICE_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>06:00:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+
+    <dependency>
+      <and>
+        <taskdep task="launch"/>
+        <streq><left>&FETCH_INPUT;</left><right>YES</right></streq>
+        <streq><left>&RUN_DATM;</left><right>NO</right></streq>
+      </and>
+    </dependency>
+  </task>
+
+  <task name="atm_prep" maxtries="&MAX_TRIES;">
+    <command>&JOBhafs;/JHAFS_ATM_PREP</command>
+    <jobname>hafs_atm_prep_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_atm_prep.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_PE;</queue>
+    &PE_EXTRA;
+    &CLUSTER_COMPUTE;
+    &CORES_EXTRA;
+    &ATM_PREP_RESOURCES;
+    &ENV_VARS;
+
+    <dependency>
+      <and>
+        <taskdep task="launch"/>
+      </and>
+    </dependency>
+  </task>
+
+
+  <task name="atm_ic" maxtries="&MAX_TRIES;">
+    <command>&JOBhafs;/JHAFS_ATM_IC</command>
+    <jobname>hafs_atm_ic_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_atm_ic.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_PE;</queue>
+    &PE_EXTRA;
+    &CLUSTER_COMPUTE;
+    &CORES_EXTRA;
+    &ATM_IC_RESOURCES;
+    &ENV_VARS;
+
+    <dependency>
+      <and>
+        <taskdep task="atm_prep"/>
+        <streq><left>&RUN_DATM;</left><right>NO</right></streq>
+        <or>
+          <taskdep task="input"/>
+          <strneq><left>&FETCH_INPUT;</left><right>YES</right></strneq>
+        </or>
+        <!-- Second dependency: the GFS output must be available -->
+        <timedep><cyclestr offset="3:25:00">@Y@m@d@H@M@S</cyclestr></timedep>
+        <!-- Or use COMgfs file dependency. Don't start until GFS analysis is available.-->
+        <and>
+          <datadep age="02:00" minsize="12000000000"><cyclestr>&COMgfs;/gfs.@Y@m@d/@H/atmos/gfs.t@Hz.atmanl.nc</cyclestr></datadep>
+          <datadep age="02:00" minsize="200000000"><cyclestr>&COMgfs;/gfs.@Y@m@d/@H/atmos/gfs.t@Hz.sfcanl.nc</cyclestr></datadep>
+        </and>
+      </and>
+    </dependency>
+  </task>
+
+
+
+
+
+
+
+
+
+
+  <metatask name="atm_lbc">
+    <var name="group">1</var>
+    <task name="atm_lbc#group#" maxtries="&MAX_TRIES;">
+      <command>&JOBhafs;/JHAFS_ATM_LBC</command>
+      <jobname>hafs_atm_lbc#group#_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+      <join><cyclestr>&WORKhafs;/hafs_atm_lbc#group#.log</cyclestr></join>
+      <account>&ACCOUNT;</account>
+      &RESERVATION;
+      <queue>&QUEUE_PE;</queue>
+      &PE_EXTRA;
+      &CORES_EXTRA;
+      &CLUSTER_COMPUTE;
+      &ATM_LBC_RESOURCES;
+      &ENV_VARS;
+      <envar><name>BC_GROUPN</name><value>1</value></envar>
+      <envar><name>BC_GROUPI</name><value>#group#</value></envar>
+
+      <dependency>
+        <and>
+          <taskdep task="atm_prep"/>
+          <streq><left>&RUN_DATM;</left><right>NO</right></streq>
+          <or>
+            <taskdep task="input"/>
+            <strneq><left>&FETCH_INPUT;</left><right>YES</right></strneq>
+          </or>
+          <!-- Second dependency: the GFS output must be available -->
+          <timedep><cyclestr offset="4:10:00">@Y@m@d@H@M@S</cyclestr></timedep>
+          <!-- Or use COMgfs file dependency. Don't start until GFS 126h forecast is available.-->
+          <or>
+            <datadep age="02:00" minsize="300000000"><cyclestr>&COMgfs;/gfs.@Y@m@d/@H/atmos/gfs.t@Hz.pgrb2.0p25.f120</cyclestr></datadep>
+            <datadep age="02:00" minsize="6000000000"><cyclestr>&COMgfs;/gfs.@Y@m@d/@H/atmos/gfs.t@Hz.atmf0120.nc</cyclestr></datadep>
+          </or>
+        </and>
+      </dependency>
+    </task>
+  </metatask>
+
+
+
+
+
+
+  <task name="forecast" maxtries="&MAX_TRIES;">
+    <command>&JOBhafs;/JHAFS_FORECAST</command>
+    <jobname>hafs_forecast_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_forecast.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_FORECAST;</queue>
+    &PE_EXTRA;
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    &FORECAST_RESOURCES;
+    &ENV_VARS;
+
+    <dependency>
+      <and>
+        <or>
+          <streq><left>&RUN_DATM;</left><right>YES</right></streq>
+          <and>
+            <taskdep task="atm_ic"/>
+            <metataskdep metatask="atm_lbc"/>
+          </and>
+        </or>
+      </and>
+    </dependency>
+  </task>
+
+  <task name="unpost" maxtries="&MAX_TRIES;">
+    <command>&JOBhafs;/JHAFS_UNPOST</command>
+    <jobname>hafs_unpost_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_unpost.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERIAL;</queue>
+    &SERIAL_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>00:05:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+
+    <dependency>
+      <!-- Start the unpost if the forecast is running or if it has
+           already completed. -->
+      <or>
+        <taskdep task="forecast" state="RUNNING"/>
+        <taskdep task="forecast"/>
+      </or>
+    </dependency>
+  </task>
+
+  <metatask name="atm_post">
+    <var name="group">1</var>
+    <task name="atm_post#group#" maxtries="&MAX_TRIES;">
+      <command>&JOBhafs;/JHAFS_ATM_POST</command>
+      <jobname>hafs_atm_post#group#_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+      <join><cyclestr>&WORKhafs;/hafs_atm_post#group#.log</cyclestr></join>
+      <account>&ACCOUNT;</account>
+      &RESERVATION;
+      <queue>&QUEUE_PE;</queue>
+      &PE_EXTRA;
+      &CORES_EXTRA;
+      &CLUSTER_COMPUTE;
+      &ATM_POST_RESOURCES;
+      &ENV_VARS;
+      <envar><name>POST_GROUPN</name><value>1</value></envar>
+      <envar><name>POST_GROUPI</name><value>#group#</value></envar>
+      <dependency>
+        <!-- Start the atm_post if the forecast is running or if it has
+             already completed and we are not using a data atmosphere. -->
+        <and>
+          <streq><left>&RUN_DATM;</left><right>NO</right></streq>
+          <or>
+            <taskdep task="forecast" state="RUNNING"/>
+            <taskdep task="forecast"/>
+          </or>
+          <taskdep task="unpost"/>
+        </and>
+      </dependency>
+    </task>
+  </metatask>
+
+
+
+
+
+
+
+  <task name="archive_disk" maxtries="&MAX_TRIES_TRANSFER;">
+    <command>&PRE; &EXhafs;/exhafs_archive.py</command>
+    <jobname>hafs_archive_disk_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&WORKhafs;/hafs_archive_disk.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERVICE;</queue>
+    &SERVICE_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_DT;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>06:00:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+    <envar><name>ARCHIVE_STEP</name><value>DISK</value></envar>
+
+    <dependency>
+      <and>
+        <taskdep task="forecast"/>
+        <metataskdep metatask="atm_post"/>
+        <taskdep task="product"/>
+        <taskdep task="output"/>
+      </and>
+    </dependency>
+  </task>
+
+  <task name="scrub_work" maxtries="&MAX_TRIES;">
+    <command>&PRE; &USHhafs;/hafs_scrub.py &SCRUB_WORK; WORK</command>
+    <jobname>hafs_scrub_work_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&LOGhafs;/hafs_scrub_work_&SID;_@Y@m@d@H.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERIAL;</queue>
+    &SERIAL_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>00:15:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+    <envar><name>HAFS_FORCE_ALT_TMPDIR</name><value>&LOGhafs;/</value></envar>
+
+    <dependency>
+      <and>
+        <taskdep task="archive_tape"/>
+        <taskdep task="archive_disk"/>
+        <datadep age="&WORK_SCRUB_TIME;"><cyclestr>&COMhafs;/&STORMLABEL;.done</cyclestr></datadep>
+        <or>
+          <not><cycleexistdep cycle_offset="6:00:00"/></not>
+          <taskdep task="forecast" state="RUNNING" cycle_offset="6:00:00"/>
+          <taskdep task="forecast" cycle_offset="6:00:00"/>
+          <taskdep task="scrub_work" cycle_offset="6:00:00"/>
+        </or>
+      </and>
+    </dependency>
+  </task>
+
+  <task name="scrub_com" maxtries="&MAX_TRIES;">
+    <command>&PRE; &USHhafs;/hafs_scrub.py &SCRUB_COM; COM</command>
+    <jobname>hafs_scrub_com_&SID;_<cyclestr>@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&LOGhafs;/hafs_scrub_com_&SID;_@Y@m@d@H.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERIAL;</queue>
+    &SERIAL_EXTRA;
+    &CLUSTER_COMPUTE;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>00:15:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+    <envar><name>HAFS_FORCE_ALT_TMPDIR</name><value>&LOGhafs;/</value></envar>
+
+    <dependency>
+      <!-- Next cycle has finished its initialization OR this cycle is the last cycle,
+           AND this cycle's archive and output jobs are complete. -->
+      <and>
+        <or>
+          <not><cycleexistdep cycle_offset="6:00:00"/></not>
+          <and>
+            <taskdep task="archive_tape" cycle_offset="6:00:00"/>
+            <taskdep task="archive_disk" cycle_offset="6:00:00"/>
+            <datadep age="&COM_SCRUB_TIME;"><cyclestr offset="6:00:00">&COMhafs;/&STORMLABEL;.done</cyclestr></datadep>
+          </and>
+          <taskdep task="scrub_com" cycle_offset="6:00:00"/>
+        </or>
+        <taskdep task="archive_tape"/>
+        <taskdep task="archive_disk"/>
+        <taskdep task="scrub_work"/>
+        <datadep age="&COM_SCRUB_TIME;"><cyclestr>&COMhafs;/&STORMLABEL;.done</cyclestr></datadep>
+      </and>
+    </dependency>
+  </task>
+
+  <task name="donefile" maxtries="&MAX_TRIES;">
+    <command>&PRE; &USHhafs;/hafs_donefile.py <cyclestr>&COMhafs;/&STORMLABEL;.done</cyclestr></command>
+    <jobname><cyclestr>hafs_donefile_&SID;_@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&LOGhafs;/hafs_donefile_&SID;_@Y@m@d@H.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERIAL;</queue>
+    &SERIAL_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>00:15:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+    <envar><name>HAFS_FORCE_ALT_TMPDIR</name><value>&LOGhafs;/</value></envar>
+
+    <dependency>
+      <or>
+        <and>
+          <metataskdep metatask="atm_post"/>
+          <taskdep task="product"/>
+          <taskdep task="output"/>
+        </and>
+
+        <!-- Allow a scrubbed cycle to complete.  This is needed to
+             handle cases where someone changes the configuration
+             mid-stream, leaving some cycles scrubbed that have not run
+             jobs that are newly needed. -->
+
+        <and>
+          <taskdep task="scrub_work"/>
+          <taskdep task="scrub_com"/>
+        </and>
+      </or>
+    </dependency>
+  </task>
+
+  <!-- Final task.  This task exists mainly to set the "final" state
+  for the cycle (final="true"), and it also sents a "cycle completed"
+  message to the jlogfile.  It is here, instead of in an entity, so
+  that you can edit the <dependency> section to match your
+  configuration.
+
+  NOTE: Most of the cycle-wide completion dependencies lie in the
+  donefile job dependency. -->
+  <task name="completion" maxtries="&MAX_TRIES;" final="true">
+    <command>&PRE; &USHhafs;/hafs_completion.py &SID; <cyclestr>@Y@m@d@H</cyclestr></command>
+    <jobname><cyclestr>hafs_completion_&SID;_@Y@m@d@H</cyclestr></jobname>
+    <join><cyclestr>&LOGhafs;/hafs_completion_&SID;_@Y@m@d@H.log</cyclestr></join>
+    <account>&ACCOUNT;</account>
+    &RESERVATION;
+    <queue>&QUEUE_SERIAL;</queue>
+    &SERIAL_EXTRA;
+    <cores>1</cores>
+    &CORES_EXTRA;
+    &CLUSTER_COMPUTE;
+    <envar><name>TOTAL_TASKS</name><value>1</value></envar>
+    <walltime>00:15:00</walltime>
+    &MEMORY;
+    &ENV_VARS;
+    <envar><name>HAFS_FORCE_ALT_TMPDIR</name><value>&LOGhafs;/</value></envar>
+
+    <dependency>
+      <or>
+        <and>
+          <taskdep task="donefile"/>
+          <taskdep task="archive_disk"/>
+          <taskdep task="archive_tape"/>
+          <taskdep task="scrub_work"/>
+          <taskdep task="scrub_com"/>
+        </and>
+
+        <!-- Allow a scrubbed cycle to complete.  This is needed to
+        handle cases where someone changes the configuration
+        mid-stream, leaving some cycles scrubbed that have not run
+        jobs that are newly needed. -->
+
+        <and>
+          <taskdep task="scrub_work"/>
+          <taskdep task="scrub_com"/>
+        </and>
+      </or>
+    </dependency>
+  </task>
+
+</workflow>

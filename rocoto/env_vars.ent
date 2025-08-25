@@ -1,0 +1,70 @@
+<!-- Environment Variables -->
+
+<!-- Kludge: uncomment to disable emails on WCOSS:
+    <native>-u nobody@localhost</native>
+-->
+
+<envar>
+  <name>PDY</name>
+  <value><cyclestr>@Y@m@d</cyclestr></value>
+</envar>
+<envar>
+  <name>cyc</name>
+  <value><cyclestr>@H</cyclestr></value>
+</envar>
+<envar>
+  <name>envir</name>
+  <value>test</value>
+</envar>
+<envar>
+  <name>RUN_ENVIR</name>
+  <value>dev</value>
+</envar>
+<envar>
+  <name>hafs_ver</name>
+  <value>v1.0.0</value>
+</envar>
+<envar>
+  <name>NET</name>
+  <value>hafs</value>
+</envar>
+<envar>
+  <name>RUN</name>
+  <value>&RUN;</value>
+</envar>
+<envar>
+  <name>WHERE_AM_I</name>
+  <value>&WHERE_AM_I;</value>
+</envar>
+<envar>
+  <name>HOMEhafs</name>
+  <value>&HOMEhafs;</value>
+</envar>
+<envar>
+  <name>USHhafs</name>
+  <value>&USHhafs;</value>
+</envar>
+<envar>
+  <name>PYTHONPATH</name>
+  <value>&USHhafs;</value>
+</envar>
+<envar>
+  <name>WORKhafs</name>
+  <value><cyclestr>&WORKhafs;</cyclestr></value>
+</envar>
+<envar>
+  <name>COMhafs</name>
+  <value><cyclestr>&COMhafs;</cyclestr></value>
+</envar>
+<envar>
+  <name>CONFhafs</name>
+  <value><cyclestr>&CONFhafs;</cyclestr></value>
+</envar>
+<envar>
+  <name>HOLDVARS</name>
+  <value><cyclestr>&HOLDVARS;</cyclestr></value>
+</envar>
+<envar>
+  <name>jlogfile</name>
+  <value>&LOGhafs;/jlogfile</value>
+</envar>

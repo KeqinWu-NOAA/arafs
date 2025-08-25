@@ -1,0 +1,13 @@
+<!-- All supported sites -->
+
+<!ENTITY % tjet             SYSTEM      "tujet.ent">
+<!ENTITY % ujet             SYSTEM      "tujet.ent">
+<!ENTITY % sjet             SYSTEM      "svjet.ent">
+<!ENTITY % vjet             SYSTEM      "svjet.ent">
+<!ENTITY % xjet             SYSTEM      "xjet.ent">
+<!ENTITY % kjet             SYSTEM      "kjet.ent">
+<!ENTITY % hera             SYSTEM      "hera.ent">
+<!ENTITY % orion            SYSTEM      "orion.ent">
+<!ENTITY % wcoss2           SYSTEM      "wcoss2.ent">
+<!ENTITY % hercules         SYSTEM      "hercules.ent">
+<!ENTITY % gaeac6           SYSTEM      "gaeac6.ent">

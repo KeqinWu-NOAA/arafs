@@ -1,0 +1,806 @@
+hafs-H225_ensemble3KM_00-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_00-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912678           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912692           SUCCEEDED                   0         1          13.0
+202409241200                  atm_ic                   207912755           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912872           SUCCEEDED                   0         1         557.0
+202409241200                atm_lbc1                   207912756           SUCCEEDED                   0         1        1371.0
+202409241200                ocn_prep                   207912757           SUCCEEDED                   0         1         437.0
+202409241200          analysis_merge                   207912953           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207915185           SUCCEEDED                   0         1       10824.0
+202409241200                  unpost                   207913065           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207915109           SUCCEEDED                   0         1       11373.0
+202409241200                ocn_post                   207915137           SUCCEEDED                   0         1       11117.0
+202409241200                 product                   207915138           SUCCEEDED                   0         1       11150.0
+202409241200                  output                   207916274           SUCCEEDED                   0         1         186.0
+202409241200            archive_disk                    68824663           SUCCEEDED                   0         1           5.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207916302           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_01-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_01-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912679           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912694           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912758           SUCCEEDED                   0         1         159.0
+202409241200                atm_init                   207912877           SUCCEEDED                   0         1         677.0
+202409241200                atm_lbc1                   207912759           SUCCEEDED                   0         1        1371.0
+202409241200                ocn_prep                   207912760           SUCCEEDED                   0         1         433.0
+202409241200          analysis_merge                   207912955           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913031           SUCCEEDED                   0         1       12177.0
+202409241200                  unpost                   207913067           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913105           SUCCEEDED                   0         1        9314.0
+202409241200                ocn_post                   207913106           SUCCEEDED                   0         1        9997.0
+202409241200                 product                   207913330           SUCCEEDED                   0         1        5528.0
+202409241200                  output                   207914251           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823500           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914313           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_02-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_02-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912680           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912696           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912761           SUCCEEDED                   0         1         174.0
+202409241200                atm_init                   207912878           SUCCEEDED                   0         1         666.0
+202409241200                atm_lbc1                   207912762           SUCCEEDED                   0         1        1369.0
+202409241200                ocn_prep                   207912763           SUCCEEDED                   0         1         431.0
+202409241200          analysis_merge                   207912959           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913032           SUCCEEDED                   0         1       12143.0
+202409241200                  unpost                   207913070           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913107           SUCCEEDED                   0         1        9342.0
+202409241200                ocn_post                   207913108           SUCCEEDED                   0         1        9326.0
+202409241200                 product                   207913331           SUCCEEDED                   0         1        5544.0
+202409241200                  output                   207914252           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823501           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914314           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_03-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_03-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912681           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912698           SUCCEEDED                   0         1           9.0
+202409241200                  atm_ic                   207912764           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912879           SUCCEEDED                   0         1         674.0
+202409241200                atm_lbc1                   207912765           SUCCEEDED                   0         1        1371.0
+202409241200                ocn_prep                   207912766           SUCCEEDED                   0         1         428.0
+202409241200          analysis_merge                   207912960           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913033           SUCCEEDED                   0         1       11997.0
+202409241200                  unpost                   207913071           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913109           SUCCEEDED                   0         1        8707.0
+202409241200                ocn_post                   207913110           SUCCEEDED                   0         1        8597.0
+202409241200                 product                   207913367           SUCCEEDED                   0         1        5337.0
+202409241200                  output                   207914236           SUCCEEDED                   0         1         186.0
+202409241200            archive_disk                    68823481           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914253           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_04-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_04-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912682           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912700           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912767           SUCCEEDED                   0         1         172.0
+202409241200                atm_init                   207912880           SUCCEEDED                   0         1         678.0
+202409241200                atm_lbc1                   207912768           SUCCEEDED                   0         1        1368.0
+202409241200                ocn_prep                   207912769           SUCCEEDED                   0         1         429.0
+202409241200          analysis_merge                   207912961           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913034           SUCCEEDED                   0         1       12061.0
+202409241200                  unpost                   207913072           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913111           SUCCEEDED                   0         1        8653.0
+202409241200                ocn_post                   207913112           SUCCEEDED                   0         1        8638.0
+202409241200                 product                   207913368           SUCCEEDED                   0         1        5405.0
+202409241200                  output                   207914237           SUCCEEDED                   0         1         184.0
+202409241200            archive_disk                    68823482           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914254           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_05-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_05-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912683           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912702           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912770           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912881           SUCCEEDED                   0         1         677.0
+202409241200                atm_lbc1                   207912771           SUCCEEDED                   0         1        1370.0
+202409241200                ocn_prep                   207912772           SUCCEEDED                   0         1         425.0
+202409241200          analysis_merge                   207912962           SUCCEEDED                   0         1         223.0
+202409241200                forecast                   207913035           SUCCEEDED                   0         1       12041.0
+202409241200                  unpost                   207913073           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913113           SUCCEEDED                   0         1        8623.0
+202409241200                ocn_post                   207913114           SUCCEEDED                   0         1        8598.0
+202409241200                 product                   207913369           SUCCEEDED                   0         1        5324.0
+202409241200                  output                   207914238           SUCCEEDED                   0         1         183.0
+202409241200            archive_disk                    68823483           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914255           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_06-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_06-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912684           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912704           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912773           SUCCEEDED                   0         1         171.0
+202409241200                atm_init                   207912882           SUCCEEDED                   0         1         668.0
+202409241200                atm_lbc1                   207912774           SUCCEEDED                   0         1        1425.0
+202409241200                ocn_prep                   207912775           SUCCEEDED                   0         1         424.0
+202409241200          analysis_merge                   207912963           SUCCEEDED                   0         1         301.0
+202409241200                forecast                   207913038           SUCCEEDED                   0         1       12114.0
+202409241200                  unpost                   207913078           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913117           SUCCEEDED                   0         1        8693.0
+202409241200                ocn_post                   207913118           SUCCEEDED                   0         1        8675.0
+202409241200                 product                   207913376           SUCCEEDED                   0         1        5336.0
+202409241200                  output                   207914256           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823502           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914315           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_07-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_07-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912685           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912707           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912777           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912884           SUCCEEDED                   0         1         678.0
+202409241200                atm_lbc1                   207912778           SUCCEEDED                   0         1        1381.0
+202409241200                ocn_prep                   207912779           SUCCEEDED                   0         1         428.0
+202409241200          analysis_merge                   207912964           SUCCEEDED                   0         1         223.0
+202409241200                forecast                   207913039           SUCCEEDED                   0         1       12128.0
+202409241200                  unpost                   207913079           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913121           SUCCEEDED                   0         1        8709.0
+202409241200                ocn_post                   207913122           SUCCEEDED                   0         1        8687.0
+202409241200                 product                   207913377           SUCCEEDED                   0         1        5239.0
+202409241200                  output                   207914262           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823503           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914317           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_08-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_08-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912686           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912709           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912780           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912885           SUCCEEDED                   0         1         669.0
+202409241200                atm_lbc1                   207912781           SUCCEEDED                   0         1        1374.0
+202409241200                ocn_prep                   207912782           SUCCEEDED                   0         1         426.0
+202409241200          analysis_merge                   207912965           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913040           SUCCEEDED                   0         1       12142.0
+202409241200                  unpost                   207913080           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913123           SUCCEEDED                   0         1        8740.0
+202409241200                ocn_post                   207913124           SUCCEEDED                   0         1        8726.0
+202409241200                 product                   207913378           SUCCEEDED                   0         1        5279.0
+202409241200                  output                   207914263           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823504           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914318           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_09-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_09-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912687           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912716           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912783           SUCCEEDED                   0         1         165.0
+202409241200                atm_init                   207912886           SUCCEEDED                   0         1         678.0
+202409241200                atm_lbc1                   207912784           SUCCEEDED                   0         1        1373.0
+202409241200                ocn_prep                   207912785           SUCCEEDED                   0         1         431.0
+202409241200          analysis_merge                   207912966           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913042           SUCCEEDED                   0         1       12063.0
+202409241200                  unpost                   207913081           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913125           SUCCEEDED                   0         1        8605.0
+202409241200                ocn_post                   207913126           SUCCEEDED                   0         1        8591.0
+202409241200                 product                   207913391           SUCCEEDED                   0         1        5120.0
+202409241200                  output                   207914264           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823505           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914319           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_10-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_10-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912688           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912718           SUCCEEDED                   0         1           9.0
+202409241200                  atm_ic                   207912786           SUCCEEDED                   0         1         168.0
+202409241200                atm_init                   207912887           SUCCEEDED                   0         1         674.0
+202409241200                atm_lbc1                   207912787           SUCCEEDED                   0         1        1375.0
+202409241200                ocn_prep                   207912788           SUCCEEDED                   0         1         429.0
+202409241200          analysis_merge                   207912967           SUCCEEDED                   0         1         222.0
+202409241200                forecast                   207913043           SUCCEEDED                   0         1       12030.0
+202409241200                  unpost                   207913146           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913171           SUCCEEDED                   0         1        7643.0
+202409241200                ocn_post                   207913172           SUCCEEDED                   0         1        8355.0
+202409241200                 product                   207913452           SUCCEEDED                   0         1        5097.0
+202409241200                  output                   207914413           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823533           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914478           SUCCEEDED                   0         1           8.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_11-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_11-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912689           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912720           SUCCEEDED                   0         1          13.0
+202409241200                  atm_ic                   207912789           SUCCEEDED                   0         1         170.0
+202409241200                atm_init                   207912888           SUCCEEDED                   0         1         657.0
+202409241200                atm_lbc1                   207912790           SUCCEEDED                   0         1        1380.0
+202409241200                ocn_prep                   207912791           SUCCEEDED                   0         1         427.0
+202409241200          analysis_merge                   207912968           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913044           SUCCEEDED                   0         1       12022.0
+202409241200                  unpost                   207913147           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913173           SUCCEEDED                   0         1        7416.0
+202409241200                ocn_post                   207913174           SUCCEEDED                   0         1        7369.0
+202409241200                 product                   207913478           SUCCEEDED                   0         1        5116.0
+202409241200                  output                   207914414           SUCCEEDED                   0         1         180.0
+202409241200            archive_disk                    68823535           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914479           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_12-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_12-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912693           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912722           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912792           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912889           SUCCEEDED                   0         1         669.0
+202409241200                atm_lbc1                   207912794           SUCCEEDED                   0         1        1394.0
+202409241200                ocn_prep                   207912793           SUCCEEDED                   0         1         426.0
+202409241200          analysis_merge                   207912969           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913045           SUCCEEDED                   0         1       12130.0
+202409241200                  unpost                   207913175           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913192           SUCCEEDED                   0         1        7584.0
+202409241200                ocn_post                   207913193           SUCCEEDED                   0         1        7571.0
+202409241200                 product                   207913479           SUCCEEDED                   0         1        5312.0
+202409241200                  output                   207914480           SUCCEEDED                   0         1         186.0
+202409241200            archive_disk                    68823559           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914509           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_13-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_13-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912695           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912724           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912795           SUCCEEDED                   0         1         163.0
+202409241200                atm_init                   207912890           SUCCEEDED                   0         1         674.0
+202409241200                atm_lbc1                   207912796           SUCCEEDED                   0         1        1365.0
+202409241200                ocn_prep                   207912797           SUCCEEDED                   0         1         428.0
+202409241200          analysis_merge                   207912970           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913046           SUCCEEDED                   0         1       11949.0
+202409241200                  unpost                   207913185           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913194           SUCCEEDED                   0         1        7809.0
+202409241200                ocn_post                   207913195           SUCCEEDED                   0         1        7789.0
+202409241200                 product                   207913480           SUCCEEDED                   0         1        5540.0
+202409241200                  output                   207914511           SUCCEEDED                   0         1         199.0
+202409241200            archive_disk                    68823569           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914537           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_14-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_14-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912697           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912726           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912798           SUCCEEDED                   0         1         162.0
+202409241200                atm_init                   207912891           SUCCEEDED                   0         1         672.0
+202409241200                atm_lbc1                   207912799           SUCCEEDED                   0         1        1371.0
+202409241200                ocn_prep                   207912800           SUCCEEDED                   0         1         425.0
+202409241200          analysis_merge                   207912971           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913047           SUCCEEDED                   0         1       12045.0
+202409241200                  unpost                   207913196           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913217           SUCCEEDED                   0         1        7210.0
+202409241200                ocn_post                   207913218           SUCCEEDED                   0         1        7193.0
+202409241200                 product                   207913556           SUCCEEDED                   0         1        5391.0
+202409241200                  output                   207914513           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823570           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914539           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_15-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_15-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912699           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912728           SUCCEEDED                   0         1          10.0
+202409241200                  atm_ic                   207912801           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912892           SUCCEEDED                   0         1         698.0
+202409241200                atm_lbc1                   207912802           SUCCEEDED                   0         1        1371.0
+202409241200                ocn_prep                   207912803           SUCCEEDED                   0         1         424.0
+202409241200          analysis_merge                   207912972           SUCCEEDED                   0         1         222.0
+202409241200                forecast                   207913048           SUCCEEDED                   0         1       12128.0
+202409241200                  unpost                   207913219           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913231           SUCCEEDED                   0         1        7705.0
+202409241200                ocn_post                   207913232           SUCCEEDED                   0         1        7689.0
+202409241200                 product                   207913557           SUCCEEDED                   0         1        5884.0
+202409241200                  output                   207914554           SUCCEEDED                   0         1         183.0
+202409241200            archive_disk                    68823581           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914595           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_16-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_16-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912701           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912730           SUCCEEDED                   0         1          12.0
+202409241200                  atm_ic                   207912804           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912893           SUCCEEDED                   0         1         679.0
+202409241200                atm_lbc1                   207912805           SUCCEEDED                   0         1        1372.0
+202409241200                ocn_prep                   207912806           SUCCEEDED                   0         1         428.0
+202409241200          analysis_merge                   207912973           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913049           SUCCEEDED                   0         1       12061.0
+202409241200                  unpost                   207913233           SUCCEEDED                   0         1           6.0
+202409241200               atm_post1                   207913257           SUCCEEDED                   0         1        7536.0
+202409241200                ocn_post                   207913258           SUCCEEDED                   0         1        7731.0
+202409241200                 product                   207913565           SUCCEEDED                   0         1        5939.0
+202409241200                  output                   207914555           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823583           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914596           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_17-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_17-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912703           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912732           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912807           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912894           SUCCEEDED                   0         1         669.0
+202409241200                atm_lbc1                   207912808           SUCCEEDED                   0         1        1372.0
+202409241200                ocn_prep                   207912809           SUCCEEDED                   0         1         424.0
+202409241200          analysis_merge                   207912974           SUCCEEDED                   0         1         226.0
+202409241200                forecast                   207913050           SUCCEEDED                   0         1       12081.0
+202409241200                  unpost                   207913259           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913283           SUCCEEDED                   0         1        7475.0
+202409241200                ocn_post                   207913284           SUCCEEDED                   0         1        7461.0
+202409241200                 product                   207913572           SUCCEEDED                   0         1        6187.0
+202409241200                  output                   207914597           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823595           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915154           SUCCEEDED                   0         1           8.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_18-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_18-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912705           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912734           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912810           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912895           SUCCEEDED                   0         1         678.0
+202409241200                atm_lbc1                   207912811           SUCCEEDED                   0         1        1374.0
+202409241200                ocn_prep                   207912812           SUCCEEDED                   0         1         429.0
+202409241200          analysis_merge                   207912975           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913051           SUCCEEDED                   0         1       11977.0
+202409241200                  unpost                   207913260           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913285           SUCCEEDED                   0         1        7590.0
+202409241200                ocn_post                   207913286           SUCCEEDED                   0         1        7579.0
+202409241200                 product                   207913573           SUCCEEDED                   0         1        6298.0
+202409241200                  output                   207914646           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823617           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914664           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_19-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_19-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912708           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912736           SUCCEEDED                   0         1           9.0
+202409241200                  atm_ic                   207912813           SUCCEEDED                   0         1         170.0
+202409241200                atm_init                   207912896           SUCCEEDED                   0         1         677.0
+202409241200                atm_lbc1                   207912814           SUCCEEDED                   0         1        1369.0
+202409241200                ocn_prep                   207912815           SUCCEEDED                   0         1         425.0
+202409241200          analysis_merge                   207912976           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913052           SUCCEEDED                   0         1       11990.0
+202409241200                  unpost                   207913287           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913317           SUCCEEDED                   0         1        7666.0
+202409241200                ocn_post                   207913318           SUCCEEDED                   0         1        7648.0
+202409241200                 product                   207913574           SUCCEEDED                   0         1        6411.0
+202409241200                  output                   207914647           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823618           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914665           SUCCEEDED                   0         1           8.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_20-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_20-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912710           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912737           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912816           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912897           SUCCEEDED                   0         1         679.0
+202409241200                atm_lbc1                   207912817           SUCCEEDED                   0         1        1368.0
+202409241200                ocn_prep                   207912818           SUCCEEDED                   0         1         425.0
+202409241200          analysis_merge                   207912977           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913053           SUCCEEDED                   0         1       12151.0
+202409241200                  unpost                   207913319           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913322           SUCCEEDED                   0         1        8050.0
+202409241200                ocn_post                   207913323           SUCCEEDED                   0         1        8021.0
+202409241200                 product                   207913575           SUCCEEDED                   0         1        6832.0
+202409241200                  output                   207914683           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823656           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914698           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_21-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_21-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912717           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912738           SUCCEEDED                   0         1           9.0
+202409241200                  atm_ic                   207912819           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912898           SUCCEEDED                   0         1         672.0
+202409241200                atm_lbc1                   207912820           SUCCEEDED                   0         1        1374.0
+202409241200                ocn_prep                   207912821           SUCCEEDED                   0         1         431.0
+202409241200          analysis_merge                   207912998           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913054           SUCCEEDED                   0         1       13016.0
+202409241200                  unpost                   207913324           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913334           SUCCEEDED                   0         1        9127.0
+202409241200                ocn_post                   207913335           SUCCEEDED                   0         1        9113.0
+202409241200                 product                   207913596           SUCCEEDED                   0         1        7992.0
+202409241200                  output                   207914858           SUCCEEDED                   0         1         227.0
+202409241200            archive_disk                    68823806           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914884           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_22-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_22-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912719           SUCCEEDED                   0         1           8.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912739           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912822           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912899           SUCCEEDED                   0         1         683.0
+202409241200                atm_lbc1                   207912823           SUCCEEDED                   0         1        1372.0
+202409241200                ocn_prep                   207912824           SUCCEEDED                   0         1         430.0
+202409241200          analysis_merge                   207912999           SUCCEEDED                   0         1         222.0
+202409241200                forecast                   207913055           SUCCEEDED                   0         1       11962.0
+202409241200                  unpost                   207913355           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913380           SUCCEEDED                   0         1        8198.0
+202409241200                ocn_post                   207913381           SUCCEEDED                   0         1        8191.0
+202409241200                 product                   207913619           SUCCEEDED                   0         1        7403.0
+202409241200                  output                   207914720           SUCCEEDED                   0         1         181.0
+202409241200            archive_disk                    68823695           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914773           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_23-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_23-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912721           SUCCEEDED                   0         1           8.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912740           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912825           SUCCEEDED                   0         1         169.0
+202409241200                atm_init                   207912900           SUCCEEDED                   0         1         676.0
+202409241200                atm_lbc1                   207912826           SUCCEEDED                   0         1        1368.0
+202409241200                ocn_prep                   207912827           SUCCEEDED                   0         1         430.0
+202409241200          analysis_merge                   207913056           SUCCEEDED                   0         1         225.0
+202409241200                forecast                   207913091           SUCCEEDED                   0         1       12012.0
+202409241200                  unpost                   207913382           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913393           SUCCEEDED                   0         1        8416.0
+202409241200                ocn_post                   207913394           SUCCEEDED                   0         1        8404.0
+202409241200                 product                   207913620           SUCCEEDED                   0         1        7618.0
+202409241200                  output                   207914774           SUCCEEDED                   0         1         184.0
+202409241200            archive_disk                    68823747           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914815           SUCCEEDED                   0         1           8.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_24-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_24-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912723           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912741           SUCCEEDED                   0         1           9.0
+202409241200                  atm_ic                   207912828           SUCCEEDED                   0         1         162.0
+202409241200                atm_init                   207912902           SUCCEEDED                   0         1         675.0
+202409241200                atm_lbc1                   207912829           SUCCEEDED                   0         1        1372.0
+202409241200                ocn_prep                   207912830           SUCCEEDED                   0         1         427.0
+202409241200          analysis_merge                   207913057           SUCCEEDED                   0         1         223.0
+202409241200                forecast                   207913092           SUCCEEDED                   0         1       11968.0
+202409241200                  unpost                   207913383           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913395           SUCCEEDED                   0         1        8437.0
+202409241200                ocn_post                   207913396           SUCCEEDED                   0         1        8424.0
+202409241200                 product                   207913621           SUCCEEDED                   0         1        7645.0
+202409241200                  output                   207914775           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823750           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207914817           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_25-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_25-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912725           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912744           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912834           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912903           SUCCEEDED                   0         1         664.0
+202409241200                atm_lbc1                   207912835           SUCCEEDED                   0         1        1373.0
+202409241200                ocn_prep                   207912836           SUCCEEDED                   0         1         430.0
+202409241200          analysis_merge                   207913093           SUCCEEDED                   0         1         229.0
+202409241200                forecast                   207913148           SUCCEEDED                   0         1       12184.0
+202409241200                  unpost                   207913427           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913439           SUCCEEDED                   0         1        9264.0
+202409241200                ocn_post                   207913440           SUCCEEDED                   0         1        9383.0
+202409241200                 product                   207913662           SUCCEEDED                   0         1        8944.0
+202409241200                  output                   207915026           SUCCEEDED                   0         1         187.0
+202409241200            archive_disk                    68823890           SUCCEEDED                   0         1           6.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915042           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_26-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_26-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912727           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912745           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912840           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912904           SUCCEEDED                   0         1         676.0
+202409241200                atm_lbc1                   207912841           SUCCEEDED                   0         1        1376.0
+202409241200                ocn_prep                   207912842           SUCCEEDED                   0         1         425.0
+202409241200          analysis_merge                   207913094           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913149           SUCCEEDED                   0         1       11958.0
+202409241200                  unpost                   207913461           SUCCEEDED                   0         1           8.0
+202409241200               atm_post1                   207913484           SUCCEEDED                   0         1        9404.0
+202409241200                ocn_post                   207913485           SUCCEEDED                   0         1        9601.0
+202409241200                 product                   207913688           SUCCEEDED                   0         1        9301.0
+202409241200                  output                   207915027           SUCCEEDED                   0         1         187.0
+202409241200            archive_disk                    68823892           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915044           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_27-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_27-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912729           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912747           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912843           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912905           SUCCEEDED                   0         1         675.0
+202409241200                atm_lbc1                   207912844           SUCCEEDED                   0         1        1361.0
+202409241200                ocn_prep                   207912845           SUCCEEDED                   0         1         430.0
+202409241200          analysis_merge                   207913095           SUCCEEDED                   0         1         221.0
+202409241200                forecast                   207915186           SUCCEEDED                   0         1       11991.0
+202409241200                  unpost                   207913489           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207915157           SUCCEEDED                   0         1       12284.0
+202409241200                ocn_post                   207915158           SUCCEEDED                   0         1       12282.0
+202409241200                 product                   207915187           SUCCEEDED                   0         1       12068.0
+202409241200                  output                   207916446           SUCCEEDED                   0         1         238.0
+202409241200            archive_disk                    68824769           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207916490           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_28-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_28-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912731           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912748           SUCCEEDED                   0         1          12.0
+202409241200                  atm_ic                   207912846           SUCCEEDED                   0         1         161.0
+202409241200                atm_init                   207912906           SUCCEEDED                   0         1         682.0
+202409241200                atm_lbc1                   207912847           SUCCEEDED                   0         1        1368.0
+202409241200                ocn_prep                   207912848           SUCCEEDED                   0         1         431.0
+202409241200          analysis_merge                   207913096           SUCCEEDED                   0         1         222.0
+202409241200                forecast                   207913151           SUCCEEDED                   0         1       12163.0
+202409241200                  unpost                   207913490           SUCCEEDED                   0         1           7.0
+202409241200               atm_post1                   207913511           SUCCEEDED                   0         1        9685.0
+202409241200                ocn_post                   207913512           SUCCEEDED                   0         1        9683.0
+202409241200                 product                   207913698           SUCCEEDED                   0         1        8445.0
+202409241200                  output                   207915064           SUCCEEDED                   0         1         179.0
+202409241200            archive_disk                    68823909           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915084           SUCCEEDED                   0         1           8.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_29-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_29-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912733           SUCCEEDED                   0         1           7.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912749           SUCCEEDED                   0         1          13.0
+202409241200                  atm_ic                   207912849           SUCCEEDED                   0         1         165.0
+202409241200                atm_init                   207912907           SUCCEEDED                   0         1         657.0
+202409241200                atm_lbc1                   207912850           SUCCEEDED                   0         1        1448.0
+202409241200                ocn_prep                   207912851           SUCCEEDED                   0         1         431.0
+202409241200          analysis_merge                   207913160           SUCCEEDED                   0         1         221.0
+202409241200                forecast                   207913197           SUCCEEDED                   0         1       12079.0
+202409241200                  unpost                   207913558           SUCCEEDED                   0         1           6.0
+202409241200               atm_post1                   207913566           SUCCEEDED                   0         1       10306.0
+202409241200                ocn_post                   207913567           SUCCEEDED                   0         1       10295.0
+202409241200                 product                   207913705           SUCCEEDED                   0         1        9066.0
+202409241200                  output                   207915102           SUCCEEDED                   0         1         184.0
+202409241200            archive_disk                    68823936           SUCCEEDED                   0         1           8.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915131           SUCCEEDED                   0         1           6.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
+hafs-H225_ensemble3KM_30-00L-2024092412
+/gpfs/f6/drsa-hurr2/world-shared/save/Jiayi.Peng/hafsU3km/rocoto
+Running H225_ensemble3KM_30-00L-2024092412 configuration
+       CYCLE                    TASK                       JOBID               STATE         EXIT STATUS     TRIES      DURATION
+================================================================================================================================
+202409241200                  launch                   207912735           SUCCEEDED                   0         1           6.0
+202409241200                   input                           -                   -                   -         -             -
+202409241200                atm_prep                   207912753           SUCCEEDED                   0         1          11.0
+202409241200                  atm_ic                   207912852           SUCCEEDED                   0         1         160.0
+202409241200                atm_init                   207912908           SUCCEEDED                   0         1         684.0
+202409241200                atm_lbc1                   207912853           SUCCEEDED                   0         1        1373.0
+202409241200                ocn_prep                   207912854           SUCCEEDED                   0         1         429.0
+202409241200          analysis_merge                   207913100           SUCCEEDED                   0         1         224.0
+202409241200                forecast                   207913161           SUCCEEDED                   0         1       12137.0
+202409241200                  unpost                   207913491           SUCCEEDED                   0         1           6.0
+202409241200               atm_post1                   207913524           SUCCEEDED                   0         1        9800.0
+202409241200                ocn_post                   207913525           SUCCEEDED                   0         1        9795.0
+202409241200                 product                   207913706           SUCCEEDED                   0         1        8561.0
+202409241200                  output                   207915065           SUCCEEDED                   0         1         182.0
+202409241200            archive_disk                    68823910           SUCCEEDED                   0         1           7.0
+202409241200              scrub_work                           -                   -                   -         -             -
+202409241200               scrub_com                           -                   -                   -         -             -
+202409241200                donefile                   207915085           SUCCEEDED                   0         1           7.0
+202409241200              completion                           -                   -                   -         -             -
+ROCOTO SAYS COMPLETION TASK DID NOT SUCCEED
+FOUND STORM1.DONE
