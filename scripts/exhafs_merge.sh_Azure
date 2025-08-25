@@ -1,0 +1,195 @@
+#!/bin/sh
+
+set -xe
+
+FGAT_MODEL=${FGAT_MODEL:-gfs}
+FGAT_HR=${FGAT_HR:-00}
+#export APRUNC='srun --ntasks=8 --ntasks-per-node=8 --cpus-per-task=1'
+
+MPISERIAL=${MPISERIAL:-${EXEChafs}/hafs_mpiserial.x}
+DATOOL=${DATOOL:-${EXEChafs}/hafs_datool.x}
+#ChangeVitals=${ChangeVitals:-${USHhafs}/changevit.sh} 
+#merge_method=${analysis_merge_method:-vortexreplace}
+
+export YMDHm6=`${NDATE:?} -6 ${YMDH}`
+export YMDHm12=`${NDATE:?} -12 ${YMDH}`
+if [[ ( $ENS = "16" ) || ( $ENS = "17" ) || ( $ENS = "18" ) || ( $ENS = "26" ) || ( $ENS = "27" ) || ( $ENS = "28" ) ]]; then
+  export YMDHx=${YMDHm6}
+  echo "$YMDHx"
+elif [[ ( $ENS = "19" ) || ( $ENS = "20" ) || ( $ENS = "29" ) || ( $ENS = "30" ) ]]; then
+  export YMDHx=${YMDHm12}
+  echo "$YMDHx"
+else
+  export YMDHx=$YMDH
+  echo "$YMDHx"
+fi
+
+CDATE=${CDATE:-$YMDH}
+ymd=$(echo $CDATE | cut -c1-8)
+yr=$(echo $CDATE | cut -c1-4)
+mn=$(echo $CDATE | cut -c5-6)
+dy=$(echo $CDATE | cut -c7-8)
+hh=$(echo $CDATE | cut -c9-10)
+
+#TC_vitals input
+#syndat=/scratch1/NCEPDEV/hwrf/noscrub/input/SYNDAT-PLUS/syndat_tcvitals.2023
+#syndatfile=/scratch1/NCEPDEV/hwrf/save/Jiayi.Peng/VItest/syndat_tcvitals.2023
+#syndatfile=/scratch1/NCEPDEV/hwrf/noscrub/Jiayi.Peng/hafs-input/SYNDAT-PLUS/syndat_tcvitals.2023
+syndatfile=${SYNDAThafs}/syndat_tcvitals.${yr}
+#Nest domain input
+#export INPUTsrc=/scratch1/NCEPDEV/hwrf/save/Jiayi.Peng/VItest/LinZhu
+export INPUTsrc=${COMvortex}
+
+#Input for basin domain
+RESTARTdst=${WORKhafs}/intercom/RESTART_init
+#Output after merge process
+export RESTARTmrg=${WORKhafs}/intercom/RESTART_analysis_merge
+mkdir -p $RESTARTmrg
+
+DATA=${DATA:-${WORKhafs}/merge}
+mkdir -p ${DATA}
+cd ${DATA}
+
+cp ${syndatfile} .
+grep "${ymd} ${hh}00" syndat_tcvitals.${yr} > syndat_tcvitals.${YMDH}
+export numlist="01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 \
+                21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40"
+export copydst="yes"
+for num in $numlist; do
+  numrecs=`grep "NHC  ${num}L" syndat_tcvitals.${YMDH} | wc -l` 
+  if [ ${numrecs} -gt 0 ]; then
+    grep "NHC  ${num}L" syndat_tcvitals.${YMDH} > syndat_tcvitals.${YMDH}.${num}l	  
+    cp syndat_tcvitals.${YMDH}.${num}l tmpvit
+
+#   perturbation TC_vitals location/wind speed         
+#    ${ChangeVitals}  
+    AA=20   # percentage of 10-m wind may change
+    DD=0.5  # degree of lat and lon may change
+# find a random #
+    aran=$(( $RANDOM %200 + 1))
+    aran=`echo 0.01*${aran}-0.01*100 | bc`  # random# between -1 and 1
+    dlat=`echo ${DD}*$aran | bc`
+#
+    aran=$(( $RANDOM %200 + 1))
+    aran=`echo 0.01*${aran}-0.01*100 | bc`  # random# between -1 and 1
+    dlon=`echo ${DD}*$aran | bc`
+#
+    aran=$(( $RANDOM %200 + 1))
+    aran=`echo 0.01*${aran}-0.01*100 | bc`  # random# between -1 and 1
+    daa=`echo ${AA}*$aran | bc`
+# read tc vit line
+    line=`cat tmpvit | head -n 1`
+    lat=`echo "${line}" | cut -c33-36`
+    lon=`echo "${line}" | cut -c38-42`
+    wind=`echo "${line}" | cut -c67-69`
+    p1=`echo "${line}" | cut -c1-32`
+    p2=`echo "${line}" | cut -c37-37`
+    p3=`echo "${line}" | cut -c43-66`
+    p4=`echo "${line}" | cut -c70-`
+    newlat=`echo ${lat} + 10*${dlat}/1 | bc`
+    newlat=$(printf %4i $newlat)
+    newlon=`echo ${lon} + 10*${dlon}/1 | bc`
+    newlon=$(printf %5i $newlon)
+    newwind=`echo ${wind} + ${wind}*${daa}*0.01/1 | bc`
+    newwind=$(printf %3i $newwind)
+    if [ ${ENS} = "00" ]; then
+      cp tmpvit tmpvit_new
+    else
+      echo "${p1}""${newlat}""${p2}""${newlon}""${p3}""${newwind}""${p4}" > tmpvit_new
+    fi	    
+#   end of TC_vitals perturbation
+    cp tmpvit_new tmpvit_${num}l
+#   Merge the storm in the region (0-45N; 100-20W)
+    linex=`cat tmpvit_${num}l | head -n 1`
+    latx=`echo "${linex}" | cut -c33-36`
+    lonx=`echo "${linex}" | cut -c38-42`
+
+#    newlatx=$(echo "scale=1; ${latx}/10.0" | bc)
+#    newlonx=$(echo "scale=1; ${lonx}/10.0" | bc)
+    newlatx=`echo ${latx}/10 | bc`
+    newlonx=`echo ${lonx}/10 | bc`
+
+    if [ $newlatx -gt 0 ] && [ $newlatx -le 45 ] && [ $newlonx -gt 20 ] && [ $newlonx -le 100 ]
+    then
+    echo "start the merge_analysis for storm ${num}L"
+#-------
+    export tcvital=${DATA}/tmpvit_${num}l
+    export MERGE_CMD="${APRUNC} ${DATOOL} vortexreplace --tcvital=${tcvital} --infile_date=${ymd}.${hh}0000 --vortexradius=650:700"
+    export RESTARTtmp=${DATA}/RESTARTtmp
+    if [ ! -d ${RESTARTtmp} ]; then
+      mkdir -p ${RESTARTtmp}
+    fi  
+    if [ ${copydst} = yes ]; then
+      ${NCP} -rp ${RESTARTdst}/* ${RESTARTtmp}/
+    fi   
+#    export RESTARTsrc=/scratch1/NCEPDEV/hwrf/save/Jiayi.Peng/VItest/LinZhu/${num}l.${YMDHx}.RESTART
+    export RESTARTsrc=${DATA}/${num}l.${YMDHx}.RESTART
+    if [ ! -d ${RESTARTsrc} ]; then
+      mkdir -p ${RESTARTsrc}
+    fi    
+
+    if [ -d ${INPUTsrc}/${num}l.${YMDH}.RESTART ]; then
+######################## current cycle with the storm exist	    
+    if [ -d ${INPUTsrc}/${num}l.${YMDHx}.RESTART ]; then
+    cp ${INPUTsrc}/${num}l.${YMDHx}.RESTART/${ymd}.${hh}0000.*.nest02.tile2.nc ${RESTARTsrc}/.
+    cp ${INPUTsrc}/${num}l.${YMDHx}.RESTART/grid_mspec.nest02_${yr}_${mn}_${dy}_${hh}.tile2.nc ${RESTARTsrc}/.
+#   update ---grid_mspec.nest02_${yr}_${mn}_${dy}_${hh}.tile2.nc ----
+    cd ${RESTARTsrc}
+    if [ ${ENS} = "00" ]; then    
+      cp grid_mspec.nest02_${yr}_${mn}_${dy}_${hh}.tile2.nc grid_latt_lont_lat_lon.nc	    
+    else  
+      ncap2 -O -s grid_latt=grid_latt+$dlat grid_mspec.nest02_${yr}_${mn}_${dy}_${hh}.tile2.nc grid_latt.nc
+      ncap2 -O -s grid_lont=grid_lont+$dlon grid_latt.nc grid_latt_lont.nc
+      ncap2 -O -s grid_lat=grid_lat+$dlat grid_latt_lont.nc grid_latt_lont_lat.nc
+      ncap2 -O -s grid_lon=grid_lon+$dlon grid_latt_lont_lat.nc grid_latt_lont_lat_lon.nc
+    fi
+    cd ${DATA}
+
+    for var in fv_core.res fv_tracer.res fv_srf_wnd.res sfc_data; do
+#      in_grid=${RESTARTsrc}/grid_mspec.nest02_${yr}_${mn}_${dy}_${hh}.tile2.nc
+      in_grid=${RESTARTsrc}/grid_latt_lont_lat_lon.nc      
+      out_grid=${RESTARTtmp}/grid_spec.nc      
+      in_file=${RESTARTsrc}/${ymd}.${hh}0000.${var}.nest02.tile2.nc
+      if [[ $var = sfc_data ]]; then
+        out_file=${RESTARTtmp}/${ymd}.${hh}0000.${var}.nc         
+      else
+        out_file=${RESTARTtmp}/${ymd}.${hh}0000.${var}.tile1.nc	      
+      fi	
+      if [ ! -s ${in_grid} ] || [ ! -s ${in_file} ] || \
+         [ ! -s ${out_grid} ] || [ ! -s ${out_file} ]; then
+        echo "FATAL ERROR: Missing in/out_grid or in/out_file"
+        exit 1
+      fi	
+      ${MERGE_CMD} \
+        --in_grid=${in_grid} \
+        --out_grid=${out_grid} \
+        --in_file=${in_file} \
+        --out_file=${out_file}
+      status=$?; [[ $status -ne 0 ]] && exit $status
+    done	    
+    export copydst="no"
+    echo "storm ID=${num}L Merging Completed"
+    rm -f tmpvit tmpvit_new 
+#--------
+    else
+      rm -f tmpvit tmpvit_new	    
+      echo "${INPUTsrc}/${num}l.${YMDHx}.RESTART is missing, no storm to be merged"
+    fi   
+####################   current cycle with the storm exist 
+    else
+      rm -f tmpvit tmpvit_new
+      echo "${INPUTsrc}/${num}l.${YMDH}.RESTART is missing, no storm to be merged"	    
+    fi
+    else
+      echo "no merge_analysis for storm ID=${num}L, ${num}L is out of domain"
+    fi
+  fi	  
+done
+
+if [ ${copydst} = yes ]; then
+#  no storm merged	
+  ${NCP} -rp ${RESTARTdst}/* ${RESTARTmrg}/
+else  
+#  after storm merged	
+  ${NCP} -rp ${RESTARTtmp}/* ${RESTARTmrg}/
+fi  
