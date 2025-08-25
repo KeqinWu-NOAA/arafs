@@ -1,0 +1,41 @@
+#PBS -N %RUN%_msg_check_%CYC%%VER:""%
+#PBS -j oe
+#PBS -S /bin/bash
+#PBS -q %QUEUE%
+#PBS -A %PROJ%-%PROJENVIR%
+#PBS -l walltime=00:10:00
+#PBS -l place=vscatter:excl,select=1:ncpus=1:mpiprocs=1:ompthreads=1
+#PBS -l debug=true
+
+model=hafs
+export NET="%NET%"
+export RUN="%RUN%"
+export cyc="%CYC%"
+%include <head.h>
+%include <envir-p1.h>
+
+export TOTAL_TASKS='1'
+export NCTSK='1'
+export OMP_THREADS='1'
+
+module list
+
+export EMAIL_SDM=YES
+export MAILFROM=${MAILFROM:-"nco.spa@noaa.gov"}
+export MAILTO=${MAILTO:-"sdm@noaa.gov,nco.spa@noaa.gov,ncep.sos@noaa.gov"}
+
+${HOMEhafs}/jobs/JHAFS_MSG_CHECK
+
+%include <tail.h>
+
+%manual
+TASK msg_check
+
+PURPOSE: Check for hurricane messages.
+
+This job will check if hurricane message files are generated in time, and if
+there is active storm while the messages is not present yet in the specic time
+closed to the cycle, an alert email will be sent out to SDM to alert for the
+setup_hurricane.
+
+%end
