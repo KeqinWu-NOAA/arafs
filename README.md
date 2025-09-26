@@ -8,6 +8,7 @@ cd arafs
 git checkout arafs_test
 
 git submodule update --init --recursive
+
 B. Build and install
 
 cd sorc
