@@ -5,8 +5,6 @@ For example, git clone https://github.com/NOAA-EMC/arafs
 
 cd arafs
 
-git checkout arafs_test
-
 git submodule update --init --recursive
 
 B. Build and install
