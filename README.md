@@ -38,6 +38,7 @@ cd arafs/rocoto
 In cronjob_arafs_3km.sh, change(or add)
 
 HOMEarafs=${HOMEarafs:-{your ARAFS directory}}
+
 D. Run ARAFS
 
 Edit cronjob_arafs_3km.sh to use your own configurations and forecast dates
@@ -52,3 +53,7 @@ Gaea/C6:
 Hera:
 
 /scratch4/NCEPDEV/hurricane/save/Keqin.Wu/arafs-input/ctrl
+
+Orion/Hercules:
+
+/work/noaa/hwrf/save/kwu/hafs-input/ctrl
