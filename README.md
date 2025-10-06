@@ -1,13 +1,11 @@
 How to use the workflow to run a test
 A. Get the code
 
-For example, git clone https://github.com/NOAA-EMC/arafs
-
-cd arafs
-
-git submodule update --init --recursive
+For example, git clone --recursive https://github.com/NOAA-EMC/arafs
 
 B. Build and install
+
+Execute following commands:
 
 cd sorc
 
@@ -16,21 +14,30 @@ cd sorc
 ./install_all.sh
 
 ./link_fix.sh
+
 C. Configure
 
-Edit system.conf in arafs/parm:
+Edit parameter files in arafs/parm:
 
-disk_project (your project)
+cd arafs/parm
 
-cpu_account (your account)
+Check which HPC machine you are in, replace system.conf with the corresponding system.conf.[machine].
 
-CDSAVE (your directory where you install your “ARAFS”)
+For example:
 
-CDSCRUB (where you will find the model output)
+cp system.conf.hercules  system.conf
 
-Edit physics configuration file, e.g.
+Edit system.conf for following parameters to use your own accounts and directories:
 
-parm/arafs_exp4.conf
+   disk_project (your project)
+
+   cpu_account (your account)
+
+   CDSAVE (your directory where you install your “ARAFS”)
+
+   CDSCRUB (where you will find the model output)
+
+Edit physics configuration file, e.g. parm/arafs_exp4.conf to fit your needs.
 
 cd arafs/rocoto
 
@@ -43,7 +50,8 @@ D. Run ARAFS
 Edit cronjob_arafs_3km.sh to use your own configurations and forecast dates
 
 sh cronjob_arafs_3km.sh
-E. Available gfs data for input:
+
+E. Here are some sample gfs data available for input in different machines:
 
 Gaea/C6:
 
@@ -56,3 +64,5 @@ Hera:
 Orion/Hercules:
 
 /work/noaa/hwrf/save/kwu/hafs-input/ctrl
+
+/work/noaa/hwrf/noscrub/hafs-input/COMGFSv16
