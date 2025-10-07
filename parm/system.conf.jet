@@ -20,9 +20,9 @@ CDSCRUB=/lfs5/HFIP/{disk_project}/{ENV[USER]}/hafstmp
 syndat=/lfs5/HFIP/hwrf-data/hwrf-input/SYNDAT-PLUS
 
 COMgfs=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/ctrl
-COMgfs_ocean=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input
+COMgfs_ocean=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/COMRTOFS
 COMvortex=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input
-DOCNdir=/lfs6/HFIP/{disk_project}/noscrub/{ENV[USER]}/DOCN
+DOCNdir=/lfs6/HFIP/{disk_project}/{ENV[USER]}/DOCN
 
 #oldcom={ENV[COMOLD]}
 COMOLD={oldcom}
