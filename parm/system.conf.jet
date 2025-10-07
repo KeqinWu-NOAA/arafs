@@ -18,6 +18,9 @@ CDNOSCRUB=/lfs5/HFIP/{disk_project}/{ENV[USER]}/noscrub/hafstrak
 CDSCRUB=/lfs5/HFIP/{disk_project}/{ENV[USER]}/hafstmp
 ## Syndat directory for finding which cycles to run
 syndat=/lfs5/HFIP/hwrf-data/hwrf-input/SYNDAT-PLUS
+
+COMgfs=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/ctrl
+
 #oldcom={ENV[COMOLD]}
 COMOLD={oldcom}
 COMIN={COMhafs}
