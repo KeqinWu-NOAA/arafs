@@ -21,7 +21,7 @@ syndat=/lfs5/HFIP/hwrf-data/hwrf-input/SYNDAT-PLUS
 
 COMgfs=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/ctrl
 COMgfs_ocean=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/COMRTOFS
-COMvortex=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input
+COMvortex=/lfs6/HFIP/hfv3gfs/Keqin.Wu/arafs-input/HFSAvortex
 DOCNdir=/lfs6/HFIP/{disk_project}/{ENV[USER]}/DOCN
 
 #oldcom={ENV[COMOLD]}
