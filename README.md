@@ -1,7 +1,7 @@
 How to use the workflow to run a test
 A. Get the code
 
-For example, git clone --recursive https://github.com/NOAA-EMC/arafs
+For example, git clone --recursive https://github.com/KeqinWu-NOAA/arafs
 
 B. Build and install
 
