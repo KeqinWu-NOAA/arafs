@@ -26,7 +26,7 @@ opts="-t -f -s sites/gaeaC6_ensemble.ent"
 
 
 ./run_arafs.py ${opts} 2023031600 00E HISTORY \
-     ${confopts} ${scrubopt} config.cpu_account=ar-cpu \
+     ${confopts} ${scrubopt} \
      config.EXPT=${EXPT} config.SUBEXPT=${SUBEXPT}_a config.ENS=99 \
      config.GFSVER=PROD2021 \
      config.run_analysis_merge=no \
