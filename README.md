@@ -1,4 +1,5 @@
 How to use the workflow to run a test
+
 A. Get the code
 
 For example, git clone --recursive https://github.com/KeqinWu-NOAA/arafs
@@ -7,7 +8,7 @@ B. Build and install
 
 Execute following commands:
 
-cd sorc
+cd arafs/sorc
 
 ./build_all.sh
 
@@ -54,6 +55,8 @@ D. Run ARAFS
 Edit cronjob_arafs_3km.sh to use your own configurations and forecast dates
 
 sh cronjob_arafs_3km.sh
+
+You can use "rocoto" to manage the workflow, check status, rewind, rerun, etc.
 
 E. Here are some sample gfs data available for input in different machines:
 
