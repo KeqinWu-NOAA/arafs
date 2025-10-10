@@ -45,7 +45,9 @@ In cronjob_arafs_3km.sh, change(or add)
 
 HOMEarafs=${HOMEarafs:-{your ARAFS directory}}
 
-Change 
+Change or edit opts="-t -f -s sites/gaeaC6_ensemble.ent" to use an *.ent file that fit your machine environment.
+
+For example, or hercules, you use" opts="-t -f -s sites/hercules.ent"
 
 D. Run ARAFS
 
