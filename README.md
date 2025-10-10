@@ -45,6 +45,8 @@ In cronjob_arafs_3km.sh, change(or add)
 
 HOMEarafs=${HOMEarafs:-{your ARAFS directory}}
 
+Change 
+
 D. Run ARAFS
 
 Edit cronjob_arafs_3km.sh to use your own configurations and forecast dates
