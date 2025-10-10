@@ -24,6 +24,10 @@ cd arafs/parm
 
 Check which HPC machine you are in, replace system.conf with the corresponding system.conf.[machine].
 
+For example, you most likely need to change "COMgfs" in system.conf to use sample gfs data available for different machines or use your own data.
+
+COMgfs=/gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs-input/ctrl
+
 For example:
 
 cp system.conf.hercules  system.conf
