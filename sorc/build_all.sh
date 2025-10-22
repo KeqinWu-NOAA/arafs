@@ -79,10 +79,10 @@ echo " .... Building tools .... "
 #------------------------------------
 # build gsi
 #------------------------------------
-$Build_gsi && {
-echo " .... Building gsi .... "
-./build_gsi.sh > $logs_dir/build_gsi.log 2>&1
-}
+# $Build_gsi && {
+# echo " .... Building gsi .... "
+# ./build_gsi.sh > $logs_dir/build_gsi.log 2>&1
+#}
 
 #------------------------------------
 # build hycom_utils
