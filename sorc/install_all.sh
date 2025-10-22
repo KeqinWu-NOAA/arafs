@@ -76,10 +76,10 @@ $Build_tools && {
 #------------------------------------
 # install gsi
 #------------------------------------
-$Build_gsi && {
-  ${CP} hafs_gsi.fd/install/bin/gsi.x                                ../exec/hafs_gsi.x
-  ${CP} hafs_gsi.fd/install/bin/enkf.x                               ../exec/hafs_gsi_enkf.x
-}
+# $Build_gsi && {
+#  ${CP} hafs_gsi.fd/install/bin/gsi.x                                ../exec/hafs_gsi.x
+#  ${CP} hafs_gsi.fd/install/bin/enkf.x                               ../exec/hafs_gsi_enkf.x
+#}
 
 #------------------------------------
 # install hycom_utils
