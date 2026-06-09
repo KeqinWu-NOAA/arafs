@@ -68,7 +68,7 @@ Gaea/C6:
 
 /gpfs/f6/drsa-hurr4/scratch/Keqin.Wu/arafs-input/ctrl
 
-Hera:
+Ursa:
 
 /scratch4/NCEPDEV/hurricane/save/Keqin.Wu/arafs-input/ctrl
 
